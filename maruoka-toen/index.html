@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>丸岡陶苑 | デザイン提案サンプル</title>
+<style>
+  :root{
+    --indigo:#2b3a4a;
+    --indigo-deep:#1a2531;
+    --gold:#b58e4f;
+    --paper:#f7f3ea;
+    --paper-deep:#efe8d8;
+    --ink:#2c2620;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"游明朝","Yu Mincho","ヒラギノ明朝 ProN","Hiragino Mincho ProN",serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.9;
+  }
+  .notice{
+    background:var(--gold);color:#fff;text-align:center;
+    padding:8px;font-size:.8rem;letter-spacing:.05em;
+  }
+  header{
+    background:var(--indigo);color:#f7f3ea;
+    padding:56px 24px 48px;text-align:center;
+    position:relative;
+  }
+  header::after{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:60px;height:3px;background:var(--gold);
+  }
+  header .kicker{letter-spacing:.4em;font-size:.75rem;color:var(--gold);margin-bottom:14px;}
+  header h1{font-size:2.4rem;font-weight:500;letter-spacing:.15em;}
+  header p{margin-top:14px;font-size:.95rem;color:#d8dde3;}
+  nav{
+    display:flex;justify-content:center;gap:0;flex-wrap:wrap;
+    background:var(--indigo-deep);
+  }
+  nav a{
+    color:#e8e2d0;text-decoration:none;padding:14px 22px;font-size:.85rem;
+    letter-spacing:.1em;border-right:1px solid rgba(255,255,255,.1);
+  }
+  section{max-width:900px;margin:0 auto;padding:70px 24px;}
+  h2{
+    font-size:1.5rem;letter-spacing:.1em;color:var(--indigo);
+    text-align:center;margin-bottom:44px;position:relative;
+  }
+  h2::before{content:"— ";color:var(--gold);}
+  h2::after{content:" —";color:var(--gold);}
+
+  .lede{
+    text-align:center;font-size:1.05rem;max-width:640px;margin:0 auto 20px;color:#4a4238;
+  }
+  .stat-row{
+    display:flex;justify-content:center;gap:48px;margin:48px 0;flex-wrap:wrap;
+  }
+  .stat{text-align:center;}
+  .stat .num{font-size:2.6rem;color:var(--gold);font-weight:600;display:block;}
+  .stat .label{font-size:.8rem;color:#6b6255;letter-spacing:.1em;}
+
+  .timeline{border-left:2px solid var(--gold);padding-left:28px;margin:40px auto;max-width:600px;}
+  .timeline-item{margin-bottom:28px;position:relative;}
+  .timeline-item::before{
+    content:"";position:absolute;left:-33px;top:6px;width:8px;height:8px;
+    border-radius:50%;background:var(--gold);
+  }
+  .timeline-item .year{color:var(--gold);font-weight:600;font-size:.9rem;}
+
+  .ware-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:18px;margin-top:36px;
+  }
+  .ware-card{
+    background:var(--paper-deep);border:1px solid #ddd4bd;padding:26px 18px;text-align:center;
+  }
+  .ware-card .name{font-size:1.05rem;color:var(--indigo);letter-spacing:.08em;margin-bottom:6px;}
+  .ware-card .desc{font-size:.78rem;color:#6b6255;}
+
+  .info-box{
+    background:var(--indigo);color:#f0ede2;padding:40px;margin-top:40px;
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  }
+  .info-box dt{color:var(--gold);font-size:.8rem;letter-spacing:.1em;margin-bottom:4px;}
+  .info-box dd{font-size:.95rem;margin-bottom:18px;}
+  .info-box a{color:#f0ede2;}
+
+  footer{
+    text-align:center;padding:36px 24px;background:var(--indigo-deep);color:#a9a396;font-size:.78rem;
+  }
+  .cta{
+    text-align:center;margin-top:50px;
+  }
+  .cta a{
+    display:inline-block;background:var(--gold);color:#fff;text-decoration:none;
+    padding:16px 44px;letter-spacing:.15em;font-size:.9rem;
+  }
+  @media(max-width:640px){
+    header h1{font-size:1.7rem;}
+    .info-box{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+
+<header>
+  <div class="kicker">KAGURAZAKA · SINCE 1892</div>
+  <h1>丸岡陶苑</h1>
+  <p>料理への心使いをお手伝い、神楽坂にある和陶器を中心にした食器店</p>
+</header>
+
+<nav>
+  <a href="#about">丸岡陶苑について</a>
+  <a href="#ware">取扱商品</a>
+  <a href="#access">アクセス</a>
+</nav>
+
+<section id="about">
+  <h2>創業130年余</h2>
+  <p class="lede">
+    丸岡陶苑は、東京・神楽坂で明治25年の創業以来、和陶器を中心に食器を扱う店舗です。
+    「料理への心使いをお手伝い」をモットーに、使いやすい器、
+    お料理の邪魔をしない控えめな器や、口当たりの良いグラス・盃などを揃えております。
+  </p>
+  <p class="lede">
+    独立した作家活動はしていなくても優れた技術を活かして作られた品に出会える店にしたい――
+    そう考え、職人仕事の美しさが感じられる器を、季節感を大切にしながらご案内しています。
+  </p>
+  <div class="stat-row">
+    <div class="stat"><span class="num">130+</span><span class="label">年の歴史</span></div>
+    <div class="stat"><span class="num">5</span><span class="label">分・飯田橋駅から</span></div>
+    <div class="stat"><span class="num">明治25</span><span class="label">年創業</span></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item"><div class="year">明治25年</div>神楽坂にて創業。以来一貫して和陶器を中心とした食器を商う。</div>
+    <div class="timeline-item"><div class="year">現在</div>清水焼・有田焼・萩焼・備前焼・江戸切子など、全国の産地から品を吟味して仕入れる。</div>
+    <div class="timeline-item"><div class="year">今も</div>神楽坂の街とともに、四季の器を提案し続けている。</div>
+  </div>
+</section>
+
+<section id="ware" style="background:var(--paper-deep);">
+  <h2>取扱商品</h2>
+  <p class="lede">実際に手に取って、重さや厚み、手の中へのおさまり感を確かめてお選びいただけます。</p>
+  <div class="ware-grid">
+    <div class="ware-card"><div class="name">清水焼</div><div class="desc">京の雅を映す繊細な絵付け</div></div>
+    <div class="ware-card"><div class="name">有田焼</div><div class="desc">白磁に映える伝統の染付</div></div>
+    <div class="ware-card"><div class="name">萩焼</div><div class="desc">使うほどに味わいが増す土もの</div></div>
+    <div class="ware-card"><div class="name">備前焼</div><div class="desc">釉薬を使わない素朴な焼き締め</div></div>
+    <div class="ware-card"><div class="name">江戸切子</div><div class="desc">口当たりの良い硝子細工</div></div>
+    <div class="ware-card"><div class="name">季節の器</div><div class="desc">春夏秋冬に応じた品揃え</div></div>
+  </div>
+</section>
+
+<section id="access">
+  <h2>ご案内</h2>
+  <div class="info-box">
+    <div>
+      <dt>所在地</dt><dd>〒162-0825 東京都新宿区神楽坂3-6</dd>
+      <dt>電話</dt><dd>03-3269-0675</dd>
+      <dt>最寄駅</dt><dd>JR・東京メトロ「飯田橋駅」、大江戸線「牛込神楽坂駅」、東西線「神楽坂駅」より徒歩5分</dd>
+    </div>
+    <div>
+      <dt>営業時間</dt><dd>火〜金 10:00〜19:00 / 土 11:00〜18:00 / 日・祝 12:00〜18:00</dd>
+      <dt>定休日</dt><dd>月曜日(仕入れ等の都合で臨時休業あり)</dd>
+      <dt>お問い合わせ</dt><dd><a href="mailto:maruoka@kagurazaka.net">maruoka@kagurazaka.net</a></dd>
+    </div>
+  </div>
+  <div class="cta"><a href="mailto:maruoka@kagurazaka.net">お問い合わせはこちら</a></div>
+</section>
+
+<footer>
+  &copy; 丸岡陶苑 — このページはデザイン提案用のサンプルです
+</footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>エヌエヌロックサービス | デザイン提案サンプル</title>
+<style>
+  :root{
+    --navy:#132339;
+    --navy-deep:#0b1523;
+    --silver:#c7ccd4;
+    --accent:#3d8bff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;
+    background:#f4f6f9;color:#1c2733;
+    line-height:1.8;
+  }
+  .notice{
+    background:var(--navy-deep);color:#fff;text-align:center;
+    padding:8px;font-size:.78rem;
+  }
+  header{
+    background:linear-gradient(160deg,var(--navy),var(--navy-deep));
+    color:#fff;padding:56px 24px;text-align:center;
+  }
+  header .badge{
+    display:inline-flex;align-items:center;gap:8px;background:rgba(61,139,255,.18);
+    border:1px solid var(--accent);border-radius:24px;padding:8px 20px;font-size:.82rem;
+    color:var(--accent);margin-bottom:20px;
+  }
+  header h1{font-size:2rem;letter-spacing:.05em;}
+  header p{margin-top:12px;color:var(--silver);font-size:.95rem;}
+
+  section{max-width:920px;margin:0 auto;padding:64px 24px;}
+  h2{
+    font-size:1.4rem;color:var(--navy);text-align:center;margin-bottom:38px;
+    letter-spacing:.05em;
+  }
+
+  .service-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;
+  }
+  .service-card{
+    background:#fff;border-radius:12px;padding:28px;text-align:center;
+    box-shadow:0 4px 14px rgba(19,35,57,.08);border-top:4px solid var(--accent);
+  }
+  .service-card .icon{font-size:1.7rem;margin-bottom:10px;}
+  .service-card .name{font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .service-card .desc{font-size:.82rem;color:#64707d;}
+
+  .notice-box{
+    background:#fff;border-radius:12px;padding:32px;margin-top:24px;
+    border-left:5px solid var(--accent);
+  }
+  .notice-box h3{color:var(--navy);margin-bottom:14px;font-size:1rem;}
+  .notice-box ul{padding-left:20px;color:#4a5764;font-size:.9rem;}
+  .notice-box li{margin-bottom:8px;}
+
+  .parking-note{
+    display:flex;gap:20px;margin-top:24px;flex-wrap:wrap;
+  }
+  .parking-note .card{
+    flex:1;min-width:220px;background:#eef2f7;border-radius:10px;padding:20px;font-size:.85rem;color:#4a5764;
+  }
+
+  .info-panel{
+    background:var(--navy);color:#e6eaf0;border-radius:14px;padding:40px;margin-top:20px;
+  }
+  .info-panel dt{color:var(--accent);font-size:.78rem;letter-spacing:.05em;margin-bottom:4px;}
+  .info-panel dd{margin-bottom:18px;font-size:.98rem;}
+  .info-panel a{color:#fff;}
+
+  .cta{text-align:center;margin-top:46px;}
+  .cta a{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:17px 46px;border-radius:6px;font-weight:700;font-size:1rem;
+  }
+
+  footer{text-align:center;padding:30px 24px;background:var(--navy-deep);color:#7d8996;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです</div>
+
+<header>
+  <div class="badge">🔑 横浜市戸塚区の鍵屋</div>
+  <h1>エヌエヌロックサービス</h1>
+  <p>鍵開け・合鍵作成・鍵交換 ｜ 地域密着で丁寧に対応いたします</p>
+</header>
+
+<section>
+  <h2>サービス内容</h2>
+  <div class="service-grid">
+    <div class="service-card"><div class="icon">🔓</div><div class="name">鍵開け</div><div class="desc">閉め出し・紛失時の解錠に対応</div></div>
+    <div class="service-card"><div class="icon">🗝️</div><div class="name">合鍵作成</div><div class="desc">各種お住まいの合鍵を作成</div></div>
+    <div class="service-card"><div class="icon">🔧</div><div class="name">鍵交換・修理</div><div class="desc">古くなった錠前の交換・修理</div></div>
+    <div class="service-card"><div class="icon">🚗</div><div class="name">イモビライザーキー</div><div class="desc">車のイモビライザーキーも予約受付中</div></div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <h2>ご利用にあたって</h2>
+  <div class="notice-box">
+    <h3>ご連絡事項</h3>
+    <ul>
+      <li>現場作業中は店舗が不在となる場合がございます</li>
+      <li>日時指定での合鍵ご予約は承っておりません</li>
+      <li>イモビライザーキーのご予約は承っております</li>
+      <li>お持ち込みのブランクキーカットはお断りしております</li>
+    </ul>
+  </div>
+  <div class="parking-note">
+    <div class="card">🅿️ 駐車スペース2台分あり（店舗正面左手に1台、右手上り坂に1台）</div>
+    <div class="card">🍽️ 腹ペコえこひいきグルメクーポン取扱店</div>
+  </div>
+</section>
+
+<section>
+  <div class="info-panel">
+    <dt>店舗名</dt><dd>エヌエヌロックサービス</dd>
+    <dt>所在地</dt><dd>〒244-0803 神奈川県横浜市戸塚区平戸町305</dd>
+    <dt>電話</dt><dd>045-821-7320</dd>
+    <dt>営業時間</dt><dd>9:00〜18:00（日曜定休）</dd>
+    <dt>お問い合わせ</dt><dd><a href="mailto:nnlock@jcom.zaq.ne.jp">nnlock@jcom.zaq.ne.jp</a></dd>
+  </div>
+  <div class="cta"><a href="mailto:nnlock@jcom.zaq.ne.jp">お問い合わせ・ご予約はこちら</a></div>
+</section>
+
+<footer>
+  &copy; エヌエヌロックサービス — このページはデザイン提案用のサンプルです
+</footer>
+</body>
+</html>
