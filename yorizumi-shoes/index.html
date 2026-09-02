@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>靴のヨリズミ ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --navy:#233142;
+    --tan:#b5793f;
+    --tan-deep:#8a5a28;
+    --paper:#f4f1ea;
+    --ink:#252420;
+    --line:#dcd6c8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;}
+  .notice{background:#e9e0c8;color:#6b5220;text-align:center;font-size:.76rem;padding:6px;}
+
+  header{position:sticky;top:0;z-index:50;background:var(--navy);}
+  .nav-wrap{max-width:1080px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{color:#fff;font-weight:800;letter-spacing:.05em;font-size:1.1rem;}
+  .brand .tan{color:var(--tan);}
+  nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  nav a{color:#dfe4ea;text-decoration:none;font-size:.82rem;}
+  nav a:hover{color:var(--tan);}
+
+  .hero{background:linear-gradient(120deg,var(--navy) 45%,#33465c);color:#fff;padding:64px 20px;}
+  .hero-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;}
+  @media(max-width:780px){.hero-grid{grid-template-columns:1fr;}}
+  .hero .kicker{color:var(--tan);letter-spacing:.2em;font-size:.75rem;font-weight:700;opacity:0;animation:fadeUp .8s .1s forwards;}
+  .hero h1{font-size:clamp(1.8rem,3.8vw,2.5rem);margin:14px 0;opacity:0;animation:fadeUp .8s .3s forwards;}
+  .hero p{color:#cdd6df;font-size:.92rem;opacity:0;animation:fadeUp .8s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .shoe-badge{
+    justify-self:center;width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #d8a768, var(--tan-deep));
+    display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;font-weight:700;font-size:.85rem;
+    box-shadow:0 0 0 6px rgba(255,255,255,.08);position:relative;overflow:hidden;
+  }
+  .shoe-badge::after{content:"";position:absolute;top:-40%;left:-40%;width:60%;height:220%;background:rgba(255,255,255,.25);transform:rotate(25deg);animation:shine 3.5s ease-in-out infinite;}
+  @keyframes shine{0%{left:-40%;}50%{left:120%;}100%{left:120%;}}
+
+  section{padding:64px 20px;}
+  .inner{max-width:1080px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .section-head{text-align:center;margin-bottom:36px;}
+  .section-head .tag{color:var(--tan-deep);letter-spacing:.16em;font-size:.72rem;font-weight:700;}
+  .section-head h2{font-size:1.6rem;margin:6px 0 0;}
+
+  table.spec{width:100%;border-collapse:collapse;background:#fff;}
+  table.spec th,table.spec td{border:1px solid var(--line);padding:14px 16px;text-align:left;font-size:.88rem;}
+  table.spec th{background:var(--navy);color:#fff;width:200px;}
+  table.spec tr:hover td{background:#faf3e3;}
+
+  .craft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .craft-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;transition:transform .3s,box-shadow .3s;}
+  .craft-card:hover{transform:translateY(-6px);box-shadow:0 14px 26px rgba(35,49,66,.1);}
+  .craft-card .role{color:var(--tan-deep);font-size:.76rem;font-weight:700;letter-spacing:.06em;}
+  .craft-card h3{margin:8px 0;font-size:1.05rem;}
+  .craft-card p{font-size:.85rem;color:#57544c;margin:0;}
+
+  .product-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .product-card{background:#fff;border-radius:10px;padding:20px;border-top:3px solid var(--tan);}
+  .product-card .name{font-weight:700;font-size:.95rem;}
+  .product-card .cat{font-size:.78rem;color:#8a8377;margin-top:4px;}
+
+  .access-box{background:var(--navy);color:#e9edf1;border-radius:12px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:.9rem;}
+  @media(max-width:700px){.access-box{grid-template-columns:1fr;}}
+  .access-box dt{color:var(--tan);font-size:.75rem;}
+  .access-box dd{margin:2px 0 14px;}
+
+  footer{padding:34px 20px;text-align:center;font-size:.78rem;color:#7d7666;border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">靴の<span class="tan">ヨリズミ</span></div>
+    <nav>
+      <ul>
+        <li><a href="#repair">修理・サービス</a></li>
+        <li><a href="#staff">職人紹介</a></li>
+        <li><a href="#shop">商品</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">KANAGAWA ISEHARA / SHOE REPAIR</div>
+      <h1>シューフィッターのいる店。<br>あなたに最適な一足を。</h1>
+      <p>神奈川県伊勢原市。ヒールの取り替えからかかと修理、敷革の取り替え、靴底修理まで店内で対応。オーダーメイドのご相談も承ります。</p>
+    </div>
+    <div class="shoe-badge">SHOE<br>FITTING</div>
+  </div>
+</div>
+
+<section id="repair">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">SHOE REPAIR</div>
+      <h2>修理・サービス内容</h2>
+    </div>
+    <table class="spec reveal">
+      <tr><th>ヒール取り替え</th><td>すり減ったヒールの交換に対応</td></tr>
+      <tr><th>かかと修理</th><td>かかりやすいかかとのすり減りを補修</td></tr>
+      <tr><th>敷革（インソール）取り替え</th><td>足あたりを整え、快適な履き心地に</td></tr>
+      <tr><th>靴底修理</th><td>ソールの張り替え・補修に対応</td></tr>
+      <tr><th>シューフィッティング相談</th><td>資格を持つスタッフが足に合う一足をご提案</td></tr>
+      <tr><th>オーダーメイド</th><td>あなたの足に合わせた靴づくりをご相談承ります</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="staff" style="background:#efe9d9;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">CRAFTSMAN</div>
+      <h2>職人紹介</h2>
+    </div>
+    <div class="craft-grid reveal">
+      <div class="craft-card">
+        <div class="role">STUDIO &amp; CRAFTSMAN</div>
+        <h3>頼住 博之</h3>
+        <p>バチェラーオブシューフィッティングの資格を持つ職人。足の構造から丁寧にご案内します。</p>
+      </div>
+      <div class="craft-card">
+        <div class="role">SHOE FITTER</div>
+        <h3>頼住 幸子</h3>
+        <p>2008年にシューフィッターの資格を取得。お客様からの信頼も厚い、きめ細やかな対応が持ち味です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">SHOPPING</div>
+      <h2>取り扱い商品（一例）</h2>
+    </div>
+    <div class="product-row reveal">
+      <div class="product-card"><div class="name">ミズノ ウォーキングシューズ LD40 Ⅵ</div><div class="cat">メンズ</div></div>
+      <div class="product-card"><div class="name">REGAL 811R AL 内羽根ストレートチップ</div><div class="cat">メンズ・ビジネス</div></div>
+      <div class="product-card"><div class="name">SORBO SRL-0520 ウォーキングシューズ</div><div class="cat">レディース</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="access" style="background:#efe9d9;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ACCESS</div>
+      <h2>アクセス</h2>
+    </div>
+    <div class="access-box reveal">
+      <div>
+        <dt>住所</dt><dd>〒259-1131 神奈川県伊勢原市伊勢原1丁目3-18</dd>
+        <dt>電話</dt><dd>0463-93-3341</dd>
+      </div>
+      <div>
+        <dt>営業時間</dt><dd>10:00〜19:00</dd>
+        <dt>定休日</dt><dd>木曜日／第3水曜日</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>靴のヨリズミ（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

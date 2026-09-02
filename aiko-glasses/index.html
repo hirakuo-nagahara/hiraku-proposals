@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アイコーメガネ ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --ink:#1e2328;
+    --paper:#ffffff;
+    --grey:#f3f4f6;
+    --line:#e2e5e9;
+    --gold:#a9822f;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;}
+  .notice{background:#f4efe2;color:#7a5f24;text-align:center;font-size:.76rem;padding:6px;}
+
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:50;}
+  .topbar{background:var(--ink);color:#cfd3d8;font-size:.72rem;text-align:center;padding:5px;letter-spacing:.05em;}
+  .nav-wrap{max-width:1160px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{font-weight:800;letter-spacing:.08em;font-size:1.15rem;}
+  .brand .gold{color:var(--gold);}
+  nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;}
+  nav a{color:var(--ink);text-decoration:none;font-size:.82rem;}
+  nav a:hover{color:var(--gold);}
+
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:52vh;}
+  @media(max-width:800px){.hero{grid-template-columns:1fr;}}
+  .hero-copy{padding:60px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .hero-copy .kicker{color:var(--gold);letter-spacing:.2em;font-size:.72rem;font-weight:700;opacity:0;animation:fadeUp .8s .1s forwards;}
+  .hero-copy h1{font-size:clamp(1.8rem,3.6vw,2.6rem);margin:14px 0;opacity:0;animation:fadeUp .8s .3s forwards;}
+  .hero-copy p{color:#4a5057;max-width:420px;opacity:0;animation:fadeUp .8s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .hero-visual{background:linear-gradient(160deg,var(--grey),#dfe2e6);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .frame-shape{width:220px;height:90px;border:6px solid var(--ink);border-radius:50px/40px;position:relative;animation:drift 6s ease-in-out infinite;}
+  .frame-shape::before,.frame-shape::after{content:"";position:absolute;top:50%;width:26px;height:2px;background:var(--ink);}
+  .frame-shape::before{left:-26px;}
+  .frame-shape::after{right:-26px;}
+  @keyframes drift{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(2deg);}}
+
+  section{padding:64px 24px;}
+  .inner{max-width:1160px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .section-head{margin-bottom:32px;}
+  .section-head .tag{color:var(--gold);letter-spacing:.16em;font-size:.72rem;font-weight:700;}
+  .section-head h2{font-size:1.5rem;margin:6px 0 0;}
+
+  .brand-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+  .brand-card{border:1px solid var(--line);border-radius:8px;padding:20px;transition:transform .25s,box-shadow .25s,border-color .25s;background:#fff;}
+  .brand-card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:var(--gold);}
+  .brand-card .name{font-weight:700;font-size:1rem;}
+  .brand-card .desc{font-size:.82rem;color:#5a6068;margin-top:6px;}
+
+  table.spec{width:100%;border-collapse:collapse;}
+  table.spec th,table.spec td{border:1px solid var(--line);padding:14px 16px;font-size:.88rem;text-align:left;}
+  table.spec th{background:var(--grey);font-weight:700;width:160px;}
+
+  .stat-band{background:var(--ink);color:#fff;border-radius:12px;padding:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center;}
+  .stat-band .num{font-size:2rem;font-weight:800;color:var(--gold);}
+  .stat-band .label{font-size:.76rem;color:#c9cdd3;margin-top:4px;}
+
+  .service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .service-item{background:var(--grey);border-radius:8px;padding:20px;font-size:.88rem;transition:background .25s;}
+  .service-item:hover{background:#eee0c2;}
+
+  footer{border-top:1px solid var(--line);padding:34px 24px;text-align:center;font-size:.78rem;color:#5a6068;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+<div class="topbar">勝川駅より名鉄バスでお越しいただけます</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">アイコー<span class="gold">メガネ</span></div>
+    <nav>
+      <ul>
+        <li><a href="#brands">取扱ブランド</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-copy">
+    <div class="kicker">KASUGAI / EYEWEAR</div>
+    <h1>見え方も、かけ心地も。<br>あなたに合う一本を。</h1>
+    <p>愛知県春日井市、勝川駅そばの眼鏡店。国内フレームから鼻でとめない設計のNEOJINまで、幅広いラインナップからお選びいただけます。</p>
+  </div>
+  <div class="hero-visual"><div class="frame-shape"></div></div>
+</div>
+
+<section id="brands">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">BRAND</div>
+      <h2>取扱ブランド・フレーム</h2>
+    </div>
+    <div class="brand-grid reveal">
+      <div class="brand-card"><div class="name">NEOJIN</div><div class="desc">哀川翔さんプロデュース。鼻でとめない設計のフレーム。</div></div>
+      <div class="brand-card"><div class="name">鯖江フレーム</div><div class="desc">国内眼鏡生産の96%を占める鯖江産フレーム。</div></div>
+      <div class="brand-card"><div class="name">トマトグラッシーズ</div><div class="desc">機能性・デザイン性に優れた人気ブランド。</div></div>
+      <div class="brand-card"><div class="name">跳ね上げメガネ</div><div class="desc">サッと上げ下げできる便利な跳ね上げ式。</div></div>
+      <div class="brand-card"><div class="name">SWANS（スポーツ）</div><div class="desc">スポーツシーン向けアイウェア。</div></div>
+      <div class="brand-card"><div class="name">バイク用メガネ</div><div class="desc">鼻パッドのないサングラスなど、走行時も快適。</div></div>
+      <div class="brand-card"><div class="name">一山メガネ</div><div class="desc">クラシックなワンブリッジデザイン。</div></div>
+      <div class="brand-card"><div class="name">キッズメガネ</div><div class="desc">お子様の成長に合わせたフレーム選びをサポート。</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="service" style="background:var(--grey);">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">SERVICE</div>
+      <h2>サービス・ご案内</h2>
+    </div>
+    <div class="service-list reveal">
+      <div class="service-item">補聴器のご相談（Oticon取扱）</div>
+      <div class="service-item">お子様用メガネ・成長に合わせた調整</div>
+      <div class="service-item">スポーツ用メガネのご相談</div>
+      <div class="service-item">レンズのみのご相談・交換</div>
+      <div class="service-item">フレームのリフォーム・調整</div>
+      <div class="service-item">18歳以下向けフレームのご案内</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">SPEC</div>
+      <h2>店舗情報</h2>
+    </div>
+    <table class="spec reveal">
+      <tr><th>店舗名</th><td>アイコーメガネ</td></tr>
+      <tr><th>所在地</th><td>愛知県春日井市（勝川駅より名鉄バス利用）</td></tr>
+      <tr><th>営業時間</th><td>10:00〜19:00</td></tr>
+      <tr><th>定休日</th><td>毎週水曜日</td></tr>
+      <tr><th>メール</th><td>kasugai.aiko.glasses@mbr.nifty.com</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="access" style="background:var(--ink);color:#fff;padding-top:0;">
+  <div class="inner">
+    <div class="stat-band reveal">
+      <div><div class="num" data-count="96">0%</div><div class="label">国内フレーム生産シェア（鯖江）</div></div>
+      <div><div class="num" data-count="8">0</div><div class="label">取扱ブランドカテゴリ</div></div>
+      <div><div class="num" data-count="10">0:00</div><div class="label">営業開始時刻</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>アイコーメガネ（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+
+  const counters = document.querySelectorAll('.stat-band .num');
+  const cio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el = e.target;
+        const raw = el.textContent.trim();
+        const target = parseInt(el.dataset.count,10);
+        const suffix = raw.replace(/^0/, '').replace(/^\d+/, '');
+        let cur = 0;
+        const step = Math.max(1, Math.round(target/40));
+        const timer = setInterval(()=>{
+          cur += step;
+          if(cur >= target){ cur = target; clearInterval(timer); }
+          el.textContent = cur + suffix;
+        }, 25);
+        cio.unobserve(el);
+      }
+    });
+  },{threshold:.6});
+  counters.forEach(c=>cio.observe(c));
+</script>
+</body>
+</html>

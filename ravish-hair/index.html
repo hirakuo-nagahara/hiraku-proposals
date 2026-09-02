@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Studio Ravish ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --blush:#e8c9c2;
+    --blush-deep:#c98a7c;
+    --ink:#3a2f2c;
+    --paper:#fffaf7;
+    --line:#f0ded7;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;}
+  .notice{background:#f6ece7;color:#8a5c50;text-align:center;font-size:.76rem;padding:6px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,250,247,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .nav-wrap{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{font-family:"Times New Roman",serif;font-size:1.3rem;letter-spacing:.06em;}
+  nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;}
+  nav a{color:var(--ink);text-decoration:none;font-size:.82rem;}
+  nav a:hover{color:var(--blush-deep);}
+
+  .hero{
+    position:relative;min-height:64vh;display:flex;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(160deg,#f6e3dd,#efc9bd 70%);overflow:hidden;
+  }
+  .hero-blob{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.6),transparent 70%);top:-160px;right:-140px;animation:float 9s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(24px);}}
+  .hero-content{position:relative;z-index:2;padding:20px;}
+  .hero-content .kicker{letter-spacing:.3em;font-size:.72rem;font-weight:700;color:#7a4238;opacity:0;animation:fadeUp .9s .1s forwards;}
+  .hero-content h1{font-family:"Times New Roman",serif;font-size:clamp(2.1rem,5vw,3.4rem);margin:16px 0;opacity:0;animation:fadeUp .9s .3s forwards;}
+  .hero-content p{max-width:480px;margin:0 auto;font-size:.92rem;color:#5c433d;opacity:0;animation:fadeUp .9s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+  section{padding:70px 20px;}
+  .inner{max-width:1100px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .section-head{text-align:center;margin-bottom:40px;}
+  .section-head .tag{color:var(--blush-deep);letter-spacing:.2em;font-size:.72rem;font-weight:700;}
+  .section-head h2{font-family:"Times New Roman",serif;font-size:1.9rem;margin:8px 0 0;}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  .gallery .tile{
+    aspect-ratio:3/4;border-radius:10px;background:linear-gradient(150deg,#f3d9d1,#d9a89b);
+    display:flex;align-items:center;justify-content:center;color:#7a4238;font-size:.76rem;text-align:center;padding:10px;
+    overflow:hidden;position:relative;transition:transform .4s ease;
+  }
+  .gallery .tile:hover{transform:scale(1.04);}
+  .gallery .tile span{transition:transform .4s ease;}
+  .gallery .tile:hover span{transform:scale(1.08);}
+  .gallery .tile:nth-child(2){background:linear-gradient(150deg,#e7c6d8,#c98fae);}
+  .gallery .tile:nth-child(3){background:linear-gradient(150deg,#f0ddb8,#d9b06b);}
+  .gallery .tile:nth-child(4){background:linear-gradient(150deg,#d9e3c9,#a9c088);}
+
+  .menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  @media(max-width:760px){.menu-wrap{grid-template-columns:1fr;}}
+  .menu-col h3{font-family:"Times New Roman",serif;font-size:1.1rem;border-bottom:2px solid var(--blush);padding-bottom:10px;margin-bottom:16px;}
+  .menu-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line);font-size:.9rem;transition:padding-left .25s ease;}
+  .menu-row:hover{padding-left:8px;background:#fff6f2;}
+  .menu-row .price{color:var(--blush-deep);font-weight:700;}
+
+  .info-strip{
+    background:#3a2f2c;color:#f3e6df;border-radius:14px;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;
+  }
+  .info-strip .item .k{font-size:.72rem;letter-spacing:.1em;color:#d3a698;margin-bottom:6px;}
+  .info-strip .item .v{font-size:.95rem;}
+
+  .notice-block{background:#fdf1ec;border:1px solid var(--line);border-radius:10px;padding:20px 24px;font-size:.85rem;color:#6e4a41;margin-top:24px;}
+
+  footer{padding:34px 20px;text-align:center;font-size:.78rem;color:#8a6c62;border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">Hair Studio <em>Ravish</em></div>
+    <nav>
+      <ul>
+        <li><a href="#style">スタイル</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#visit">訪問美容</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-content">
+    <div class="kicker">EHIME IMABARI / HAIR SALON</div>
+    <h1>自分を取り戻す、<br>ひとりの時間を。</h1>
+    <p>愛媛県今治市 上浦町、しまなみ海道のそばで。Ravish（ラヴィッシュ）は、女性が自分を取り戻す唯一の時間を大切に過ごしていただける空間を目指しています。</p>
+  </div>
+</div>
+
+<section id="style">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">STYLE GALLERY</div>
+      <h2>スタイルギャラリー</h2>
+    </div>
+    <div class="gallery reveal">
+      <div class="tile"><span>デジタルパーマ<br>（形状記憶）</span></div>
+      <div class="tile"><span>フェミニン<br>巻き髪スタイル</span></div>
+      <div class="tile"><span>カラー<br>スタイル</span></div>
+      <div class="tile"><span>メンズ<br>スタイル</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#fdf1ec;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">MENU</div>
+      <h2>メニュー・ご案内</h2>
+    </div>
+    <div class="menu-wrap reveal">
+      <div class="menu-col">
+        <h3>スタイリング</h3>
+        <div class="menu-row"><span>デジタルパーマ（形状記憶）</span><span class="price">要ご相談</span></div>
+        <div class="menu-row"><span>カット</span><span class="price">要ご相談</span></div>
+        <div class="menu-row"><span>メンズコスメ取り扱いあり</span><span class="price">お問い合わせください</span></div>
+      </div>
+      <div class="menu-col">
+        <h3>その他サービス</h3>
+        <div class="menu-row"><span>訪問美容（ご自宅・施設へ出張）</span><span class="price">応相談</span></div>
+        <div class="menu-row"><span>お支払い</span><span class="price">カード対応可</span></div>
+        <div class="menu-row"><span>LINE公式アカウント</span><span class="price">ご予約・ご相談</span></div>
+      </div>
+    </div>
+    <div class="notice-block reveal">Webクーポン：このページを印刷してご来店いただくと技術料10%OFF（他割引との併用不可）※デザイン提案サンプルのため実際のクーポンではありません。</div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">HOME VISIT</div>
+      <h2>訪問美容について</h2>
+    </div>
+    <p class="reveal" style="max-width:640px;margin:0 auto;text-align:center;font-size:.92rem;color:#5c433d;">ご自宅や施設への出張美容も承っております。外出が難しい方にも、いつもの安らぎの時間をお届けします。詳しくはお電話またはLINEにてお気軽にお問い合わせください。</p>
+  </div>
+</section>
+
+<section id="access" style="background:#fdf1ec;">
+  <div class="inner">
+    <div class="info-strip reveal">
+      <div class="item"><div class="k">SALON</div><div class="v">Hair Studio Ravish（ヘアスタジオ ラヴィッシュ）</div></div>
+      <div class="item"><div class="k">ADDRESS</div><div class="v">愛媛県今治市上浦町井口6691-2</div></div>
+      <div class="item"><div class="k">MAIL</div><div class="v">h.s.ravish@hotmail.co.jp</div></div>
+      <div class="item"><div class="k">SNS</div><div class="v">LINE公式アカウント／Instagram</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Hair Studio Ravish（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

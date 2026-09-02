@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宮島建具店 ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --wood:#241a12;
+    --wood-deep:#150f0a;
+    --gold:#c99a4a;
+    --paper:#f5efe2;
+    --ink:#241a12;
+    --line:#e2d6bd;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho",serif;line-height:1.9;}
+  .notice{background:#e6dcc2;color:#5a4a20;text-align:center;font-size:.76rem;padding:6px;font-family:sans-serif;}
+
+  header{position:sticky;top:0;z-index:50;background:var(--wood);}
+  .nav-wrap{max-width:1080px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{color:#f3ead2;font-size:1.1rem;letter-spacing:.1em;}
+  .brand .gold{color:var(--gold);}
+  nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-family:sans-serif;}
+  nav a{color:#d8cbb0;text-decoration:none;font-size:.8rem;}
+  nav a:hover{color:var(--gold);}
+
+  .hero{
+    position:relative;background:linear-gradient(180deg,var(--wood-deep),var(--wood) 60%);color:#f3ead2;
+    padding:90px 20px 100px;text-align:center;overflow:hidden;
+  }
+  .hero .grain{position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.02) 0 2px,transparent 2px 6px);animation:grainShift 14s linear infinite;}
+  @keyframes grainShift{0%{transform:translateX(0);}100%{transform:translateX(-60px);}}
+  .hero-inner{position:relative;z-index:2;}
+  .hero .kicker{color:var(--gold);letter-spacing:.32em;font-size:.7rem;font-family:sans-serif;font-weight:700;opacity:0;animation:fadeUp 1s .1s forwards;}
+  .hero h1{font-size:clamp(2rem,4.6vw,3rem);margin:20px 0;font-weight:400;opacity:0;animation:fadeUp 1s .3s forwards;}
+  .hero p{max-width:560px;margin:0 auto;color:#d8cbb0;font-size:.92rem;font-family:sans-serif;opacity:0;animation:fadeUp 1s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+  section{padding:70px 20px;}
+  .inner{max-width:1080px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .section-head{text-align:center;margin-bottom:40px;}
+  .section-head .tag{color:var(--gold);letter-spacing:.2em;font-size:.72rem;font-weight:700;font-family:sans-serif;}
+  .section-head h2{font-size:1.7rem;margin:8px 0 0;font-weight:400;}
+
+  .field-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  @media(max-width:760px){.field-grid{grid-template-columns:1fr;}}
+  .field-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 26px;background:#fff;transition:background .3s ease;}
+  .field-card:hover{background:#faf3e2;}
+  .field-card .jp{font-size:1.15rem;margin-bottom:8px;}
+  .field-card .en{font-family:sans-serif;font-size:.68rem;letter-spacing:.14em;color:var(--gold);margin-bottom:12px;}
+  .field-card p{font-size:.85rem;color:#5a5040;margin:0;font-family:sans-serif;}
+
+  .material-strip{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .material-chip{
+    background:var(--wood);color:#f3ead2;padding:8px 18px;border-radius:2px;font-size:.82rem;font-family:sans-serif;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .material-chip:hover{transform:translateY(-4px);background:var(--gold);color:var(--wood-deep);}
+
+  .heritage-note{
+    max-width:720px;margin:0 auto;text-align:center;font-size:.95rem;color:#4a4030;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0;
+  }
+  .heritage-note strong{color:var(--gold);display:block;font-family:sans-serif;font-size:.72rem;letter-spacing:.18em;margin-bottom:14px;}
+
+  .access-box{background:var(--wood);color:#f3ead2;border-radius:4px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-family:sans-serif;font-size:.88rem;}
+  @media(max-width:700px){.access-box{grid-template-columns:1fr;}}
+  .access-box dt{color:var(--gold);font-size:.72rem;letter-spacing:.05em;}
+  .access-box dd{margin:2px 0 16px;}
+
+  footer{padding:34px 20px;text-align:center;font-size:.78rem;color:#7a7050;border-top:1px solid var(--line);font-family:sans-serif;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">宮島<span class="gold">建具店</span></div>
+    <nav>
+      <ul>
+        <li><a href="#fields">事業内容</a></li>
+        <li><a href="#material">扱う木材</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="grain"></div>
+  <div class="hero-inner">
+    <div class="kicker">SAITAMA SHIKI / TATEGU CRAFTSMAN</div>
+    <h1>国宝・重要文化財の建具を、<br>手仕事で受け継ぐ。</h1>
+    <p>有限会社宮島建具店は、社寺建築から住宅・商業建築、文化財建具の保存修理まで、木の加工と補修を得意とする施工会社です。職人による手仕事で、木の質感を大切にしたものづくりをしています。</p>
+  </div>
+</div>
+
+<section id="fields">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">FIELDS OF WORK</div>
+      <h2>事業内容</h2>
+    </div>
+    <div class="field-grid reveal">
+      <div class="field-card">
+        <div class="jp">社寺建築</div>
+        <div class="en">SHRINE &amp; TEMPLE</div>
+        <p>門・扉・茶室建具・茶室障子・茶室襖・茶室躙り口など、社寺の建具を手がけます。</p>
+      </div>
+      <div class="field-card">
+        <div class="jp">住宅・商業建築</div>
+        <div class="en">RESIDENCE &amp; COMMERCIAL</div>
+        <p>近代和風建具、洋館建具（明治期・大正期建具）、無垢板テーブル・一枚板の注文製作。</p>
+      </div>
+      <div class="field-card">
+        <div class="jp">文化財建具</div>
+        <div class="en">CULTURAL ASSETS</div>
+        <p>国宝・重要文化財の文化財建具保存修理。蔵戸・大戸・城門・門扉の修理製作にも対応。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efe6d0;">
+  <div class="inner">
+    <div class="heritage-note reveal">
+      <strong>ABOUT</strong>
+      原木の加工、材料取りを一から行います。木造建築を得意としていますので、木造新築・リフォームなど、工務店としてのご相談も承っています。対応エリアは東京・埼玉・神奈川・群馬・関東・東北・近畿・長野。
+    </div>
+  </div>
+</section>
+
+<section id="material">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">MATERIAL</div>
+      <h2>扱う木材</h2>
+    </div>
+    <div class="material-strip reveal">
+      <div class="material-chip">木曽檜</div>
+      <div class="material-chip">欅（けやき）</div>
+      <div class="material-chip">玉杢</div>
+      <div class="material-chip">秋田杉</div>
+      <div class="material-chip">天然木・無垢板</div>
+    </div>
+  </div>
+</section>
+
+<section id="access" style="background:#efe6d0;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ACCESS</div>
+      <h2>アクセス・お問い合わせ</h2>
+    </div>
+    <div class="access-box reveal">
+      <div>
+        <dt>会社名</dt><dd>有限会社宮島建具店</dd>
+        <dt>代表</dt><dd>高橋利幸</dd>
+      </div>
+      <div>
+        <dt>住所</dt><dd>埼玉県志木市上宗岡4-10-11</dd>
+        <dt>電話／メール</dt><dd>048-487-5557 ／ ttttt@mub.biglobe.ne.jp</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>宮島建具店（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

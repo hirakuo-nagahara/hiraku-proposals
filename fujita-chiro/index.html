@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>羽曳野カイロプラクティック院 ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --navy:#1c3a5e;
+    --navy-deep:#122943;
+    --accent:#3f8f7c;
+    --accent-soft:#e6f2ef;
+    --paper:#f7f5f0;
+    --ink:#2a2f36;
+    --line:#dfe3e6;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.8;
+  }
+  .notice{
+    background:#f0e9d8;
+    color:#6b5a2a;
+    text-align:center;
+    font-size:0.78rem;
+    padding:6px 10px;
+    letter-spacing:.03em;
+  }
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(28,58,94,0.96);
+    backdrop-filter:blur(4px);
+    color:#fff;
+  }
+  .nav-wrap{
+    max-width:1080px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+  }
+  .brand{font-size:1.15rem;font-weight:700;letter-spacing:.04em;}
+  .brand span{color:var(--accent);}
+  nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap;}
+  nav a{color:#eef3f8;text-decoration:none;font-size:.88rem;border-bottom:1px solid transparent;transition:border-color .25s,opacity .25s;}
+  nav a:hover{border-color:var(--accent);opacity:.9;}
+
+  .hero{
+    position:relative;
+    background:linear-gradient(135deg,var(--navy-deep),var(--navy) 70%);
+    color:#fff;
+    padding:90px 20px 110px;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;right:-120px;top:-120px;
+    width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(63,143,124,.35),transparent 70%);
+  }
+  .hero-inner{max-width:1080px;margin:0 auto;position:relative;z-index:2;}
+  .eyebrow{color:var(--accent);letter-spacing:.18em;font-size:.78rem;font-weight:700;opacity:0;transform:translateY(14px);animation:riseIn .8s .1s forwards;}
+  h1.hero-title{font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 18px;opacity:0;transform:translateY(14px);animation:riseIn .8s .3s forwards;}
+  .hero-lead{max-width:560px;color:#d7e2ec;opacity:0;transform:translateY(14px);animation:riseIn .8s .5s forwards;}
+  @keyframes riseIn{to{opacity:1;transform:translateY(0);}}
+
+  .stat-row{
+    display:flex;gap:36px;margin-top:44px;flex-wrap:wrap;
+    opacity:0;transform:translateY(14px);animation:riseIn .8s .7s forwards;
+  }
+  .stat{min-width:120px;}
+  .stat .num{font-size:2.2rem;font-weight:800;color:#fff;}
+  .stat .num small{font-size:1.1rem;font-weight:600;margin-left:2px;}
+  .stat .label{font-size:.78rem;color:#b7c7d6;margin-top:2px;}
+
+  section{padding:76px 20px;}
+  .section-inner{max-width:1080px;margin:0 auto;}
+  .section-head{text-align:center;margin-bottom:44px;}
+  .section-head .tag{color:var(--accent);font-weight:700;letter-spacing:.14em;font-size:.75rem;}
+  .section-head h2{font-size:1.7rem;margin:8px 0 0;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .symptom-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;
+  }
+  .symptom-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 20px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .symptom-card:hover{transform:translateY(-6px);box-shadow:0 14px 26px rgba(28,58,94,.12);border-color:var(--accent);}
+  .symptom-card .n{color:var(--accent);font-weight:800;font-size:.85rem;}
+  .symptom-card p{margin:8px 0 0;font-size:.92rem;color:#4a5057;}
+
+  .split{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;
+  }
+  @media(max-width:800px){.split{grid-template-columns:1fr;}}
+  .profile-photo{
+    background:linear-gradient(160deg,#c9d8e3,#8fa9bd);
+    border-radius:14px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+    color:#334a5c;font-size:.85rem;letter-spacing:.1em;
+  }
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .badge{background:var(--accent-soft);color:var(--accent);font-size:.76rem;font-weight:700;padding:6px 12px;border-radius:20px;}
+
+  table.menu{width:100%;border-collapse:collapse;margin-top:8px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.04);}
+  table.menu th,table.menu td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem;}
+  table.menu th{background:var(--navy);color:#fff;font-weight:600;}
+  table.menu tr:last-child td{border-bottom:none;}
+  table.menu td.price{font-weight:800;color:var(--navy);white-space:nowrap;}
+
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;counter-reset:step;margin-top:10px;}
+  .flow-step{position:relative;padding:24px 20px 20px;background:#fff;border:1px solid var(--line);}
+  .flow-step + .flow-step{border-left:none;}
+  .flow-step::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:20px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+  .flow-step h4{margin:10px 0 6px;font-size:.98rem;}
+  .flow-step p{margin:0;font-size:.84rem;color:#5a6068;}
+
+  .access-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;}
+  .access-box dl{display:grid;grid-template-columns:110px 1fr;row-gap:12px;column-gap:10px;margin:0;font-size:.92rem;}
+  .access-box dt{color:#6b7280;}
+  .access-box dd{margin:0;}
+
+  footer{background:var(--navy-deep);color:#c7d3de;padding:36px 20px;text-align:center;font-size:.8rem;}
+  footer a{color:#9fd6c6;}
+
+  .cta-bar{
+    background:var(--accent);color:#fff;text-align:center;padding:38px 20px;
+  }
+  .cta-bar h3{margin:0 0 10px;font-size:1.2rem;}
+  .cta-bar p{margin:0;font-size:.88rem;opacity:.92;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">羽曳野<span>カイロプラクティック院</span></div>
+    <nav>
+      <ul>
+        <li><a href="#about">こんな症状に</a></li>
+        <li><a href="#menu">施術・料金</a></li>
+        <li><a href="#director">院長紹介</a></li>
+        <li><a href="#flow">ご来院の流れ</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">開業30年 ／ 全国総合カイロプラクター協議会公認</div>
+    <h1 class="hero-title">頑固な肩こり・腰痛に、<br>ゆがみから整えるカイロプラクティック。</h1>
+    <p class="hero-lead">大阪府羽曳野市高鷲の完全予約制カイロプラクティック院。羽曳野・藤井寺・松原・堺・八尾・富田林エリアから、長年の不調に悩む方にご来院いただいています。</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num" data-count="30">0<small>年</small></div><div class="label">開業からの実績</div></div>
+      <div class="stat"><div class="num" data-count="6000">0<small>円〜</small></div><div class="label">初回施術費用</div></div>
+      <div class="stat"><div class="num" data-count="21">0<small>時まで</small></div><div class="label">受付時間(要予約)</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="tag">SYMPTOM</div>
+      <h2>こんなお悩みで来院される方が多くいらっしゃいます</h2>
+    </div>
+    <div class="symptom-grid">
+      <div class="symptom-card reveal"><div class="n">01</div><p>頑固な肩こり・腰痛、手足のしびれや疲労感が抜けない</p></div>
+      <div class="symptom-card reveal"><div class="n">02</div><p>朝起きると足腰が痛む。翌朝になっても疲れが取れない</p></div>
+      <div class="symptom-card reveal"><div class="n">03</div><p>頭痛や耳鳴りが続き、夜も眠れず目も疲れる</p></div>
+      <div class="symptom-card reveal"><div class="n">04</div><p>正座やあぐらができない。階段の上り下りがつらい</p></div>
+      <div class="symptom-card reveal"><div class="n">05</div><p>腕を伸ばすと痛い・上がりにくい・しびれてだるい</p></div>
+      <div class="symptom-card reveal"><div class="n">06</div><p>むちうち、坐骨神経痛、五十肩、スポーツ障害でお悩みの方</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#eef1f4;">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="tag">MENU &amp; PRICE</div>
+      <h2>施術メニュー・料金</h2>
+    </div>
+    <table class="menu reveal">
+      <tr><th>内容</th><th>料金</th></tr>
+      <tr><td>初診料</td><td class="price">1,000円</td></tr>
+      <tr><td>施術料（初回・初診料とは別）</td><td class="price">5,000円</td></tr>
+      <tr><td>初回合計（初診料＋施術料）</td><td class="price">6,000円</td></tr>
+      <tr><td>2回目以降の施術料</td><td class="price">5,000円</td></tr>
+    </table>
+    <p class="reveal" style="margin-top:18px;font-size:.86rem;color:#5a6068;">対応症状：首・肩こり／腰痛／手足のしびれ／むちうち／坐骨神経痛／五十肩／背部痛／ダイエット／内臓機能低下／O脚／痩身　※完全予約制です。</p>
+  </div>
+</section>
+
+<section id="director">
+  <div class="section-inner split">
+    <div class="reveal">
+      <div class="tag">DIRECTOR</div>
+      <h2 style="margin:8px 0 16px;font-size:1.5rem;">カイロプラクター　藤田健次</h2>
+      <p>「ゆがんだ体をバランスの良い健康な体、姿勢に戻します。」を理念に、開業から30年にわたり地域の皆様の体づくりに携わってきました。現在も修行を続ける古流柔術の技術を、健康と護身の両面に役立てています。</p>
+      <div class="badge-row">
+        <span class="badge">全国総合カイロプラクター協議会 公認</span>
+        <span class="badge">完全予約制</span>
+        <span class="badge">羽曳野・松原・堺 対応</span>
+      </div>
+    </div>
+    <div class="profile-photo reveal">院長イメージ写真（差し替え用）</div>
+  </div>
+</section>
+
+<section id="flow" style="background:#eef1f4;">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="tag">FLOW</div>
+      <h2>ご来院の流れ</h2>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-step"><h4>ご予約</h4><p>お電話にて完全予約制でご案内しています。当日予約も可能です。</p></div>
+      <div class="flow-step"><h4>カウンセリング</h4><p>症状や生活習慣を丁寧にお伺いし、体のゆがみを確認します。</p></div>
+      <div class="flow-step"><h4>施術</h4><p>お一人おひとりの状態に合わせて調整。無理な力は加えません。</p></div>
+      <div class="flow-step"><h4>アフターケア</h4><p>ご自宅でのケア方法もあわせてご案内し、再発しにくい体づくりをサポートします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="section-inner split">
+    <div class="access-box reveal">
+      <dl>
+        <dt>住所</dt><dd>大阪府羽曳野市高鷲2-2-13</dd>
+        <dt>電話</dt><dd>072-938-7347（予約制）</dd>
+        <dt>受付時間</dt><dd>10:00〜12:00／14:00〜21:00</dd>
+        <dt>定休日</dt><dd>日曜・祝日、12/31〜1/4、8/13〜15</dd>
+        <dt>対応エリア</dt><dd>羽曳野・藤井寺・松原・堺市・八尾市・富田林・大阪狭山・大阪市東住吉区／平野区 ほか</dd>
+      </dl>
+    </div>
+    <div class="reveal">
+      <div class="tag" style="color:var(--accent);font-weight:700;font-size:.75rem;letter-spacing:.14em;">ACCESS</div>
+      <h2 style="margin:8px 0 16px;font-size:1.4rem;">アクセス</h2>
+      <p style="font-size:.9rem;color:#5a6068;">近鉄南大阪線・道明寺線エリアからも多数ご来院。お車の方も駐車スペースをご案内しますので、お電話の際にお申し付けください。</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar reveal">
+  <h3>まずはお気軽にご相談ください</h3>
+  <p>072-938-7347（予約制）／ 完全予約制のため事前のお電話をお願いしております</p>
+</div>
+
+<footer>
+  <p>羽曳野カイロプラクティック院（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  // scroll reveal
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.15});
+  els.forEach(el=>io.observe(el));
+
+  // count up
+  const counters = document.querySelectorAll('.stat .num');
+  const cio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el = e.target;
+        const target = parseInt(el.dataset.count,10);
+        const suffix = el.querySelector('small') ? el.querySelector('small').outerHTML : '';
+        let cur = 0;
+        const step = Math.max(1, Math.round(target/40));
+        const timer = setInterval(()=>{
+          cur += step;
+          if(cur >= target){ cur = target; clearInterval(timer); }
+          el.innerHTML = cur + suffix;
+        }, 25);
+        cio.unobserve(el);
+      }
+    });
+  },{threshold:.6});
+  counters.forEach(c=>cio.observe(c));
+</script>
+</body>
+</html>

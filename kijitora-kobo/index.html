@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キジトラ革工房 ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --olive:#5a5233;
+    --amber:#c17a3a;
+    --paper:#f2ece0;
+    --ink:#2c2820;
+    --line:#ded4bd;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85;}
+  .notice{background:#e6dcc2;color:#5a4a20;text-align:center;font-size:.76rem;padding:6px;}
+
+  header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nav-wrap{max-width:1000px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{font-weight:800;font-size:1.05rem;}
+  .brand .amber{color:var(--amber);}
+  nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  nav a{color:var(--ink);text-decoration:none;font-size:.8rem;}
+  nav a:hover{color:var(--amber);}
+
+  .hero{padding:64px 20px 50px;text-align:center;}
+  .hero .kicker{color:var(--amber);letter-spacing:.22em;font-weight:700;font-size:.72rem;opacity:0;animation:fadeUp .8s .1s forwards;}
+  .hero h1{font-size:clamp(1.8rem,4vw,2.5rem);margin:14px 0;opacity:0;animation:fadeUp .8s .3s forwards;}
+  .hero p{max-width:520px;margin:0 auto;color:#5a5340;font-size:.9rem;opacity:0;animation:fadeUp .8s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+  section{padding:56px 20px;}
+  .inner{max-width:1000px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .section-head{text-align:center;margin-bottom:36px;}
+  .section-head .tag{color:var(--amber);letter-spacing:.16em;font-size:.72rem;font-weight:700;}
+  .section-head h2{font-size:1.5rem;margin:6px 0 0;}
+
+  /* process scroll */
+  .process{position:relative;max-width:640px;margin:0 auto;}
+  .process::before{content:"";position:absolute;left:19px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .p-step{position:relative;padding:0 0 40px 56px;}
+  .p-step .num{
+    position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--olive);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+  }
+  .p-step h4{margin:2px 0 6px;font-size:1rem;}
+  .p-step p{margin:0;font-size:.86rem;color:#5a5340;}
+
+  .goods-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+  .goods-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;text-align:center;
+    transition:transform .3s ease;position:relative;
+  }
+  .goods-card:hover{transform:translateY(-6px) rotate(-.5deg);}
+  .goods-card .swatch{width:100%;height:70px;border-radius:6px;background:linear-gradient(135deg,#8a5a2c,#c99456);margin-bottom:12px;}
+  .goods-card:nth-child(2) .swatch{background:linear-gradient(135deg,#4a4033,#7a6b4f);}
+  .goods-card:nth-child(3) .swatch{background:linear-gradient(135deg,#6b3a2a,#a3634a);}
+  .goods-card:nth-child(4) .swatch{background:linear-gradient(135deg,#5a5233,#8f8656);}
+  .goods-card .name{font-weight:700;font-size:.92rem;}
+
+  .info-box{background:var(--olive);color:#f3ecd8;border-radius:12px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:.88rem;}
+  @media(max-width:700px){.info-box{grid-template-columns:1fr;}}
+  .info-box dt{color:var(--amber);font-size:.74rem;}
+  .info-box dd{margin:2px 0 14px;}
+
+  footer{padding:34px 20px;text-align:center;font-size:.78rem;color:#7a7458;border-top:1px solid var(--line);}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">キジトラ<span class="amber">革工房</span></div>
+    <nav>
+      <ul>
+        <li><a href="#process">ご注文の流れ</a></li>
+        <li><a href="#goods">つくるもの</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="kicker">SAITAMA KAWAGUCHI / LEATHER WORKSHOP</div>
+  <h1>くつも、かばんも、<br>一つひとつ手で仕立てる。</h1>
+  <p>埼玉県川口市、西川口・蕨・鳩ヶ谷から通える革工房。くつの修理からかばんの修理、オーダーメイド、革製品のリメイクまで承っています。</p>
+</div>
+
+<section id="process">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ORDER FLOW</div>
+      <h2>ご注文からお渡しまで</h2>
+    </div>
+    <div class="process reveal">
+      <div class="p-step"><div class="num">1</div><h4>ご来店・ご相談</h4><p>ご来店にて直接ご相談いただけます。遠方の方は事前にご連絡ください（写真添付をお願いする場合があります）。</p></div>
+      <div class="p-step"><div class="num">2</div><h4>お見積り・お預かり</h4><p>くつの修理、かばん等の修理、オーダーメイド、リメイクなど、ご要望に合わせてお見積りします。</p></div>
+      <div class="p-step"><div class="num">3</div><h4>お支払い</h4><p>ご来店でのお支払いのほか、郵貯銀行・PayPay銀行でのお支払いにも対応（代金引換は不可）。</p></div>
+      <div class="p-step"><div class="num">4</div><h4>発送・お渡し</h4><p>ご精算後、定形外郵便やゆうパック（ヤマト運輸）にて発送、またはご来店でのお渡しとなります。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="goods" style="background:#e9e0c9;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">GOODS</div>
+      <h2>取り扱い・製作アイテム</h2>
+    </div>
+    <div class="goods-grid reveal">
+      <div class="goods-card"><div class="swatch"></div><div class="name">くつの修理</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">かばん等の修理</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">オーダーメイド</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">革製品のリメイク</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">ねこかばん</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">ミニランドセル</div></div>
+      <div class="goods-card"><div class="swatch"></div><div class="name">鞄の教室</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ACCESS</div>
+      <h2>アクセス</h2>
+    </div>
+    <div class="info-box reveal">
+      <div>
+        <dt>住所</dt><dd>〒333-0842 埼玉県川口市前川2-20-7</dd>
+        <dt>最寄駅</dt><dd>JR京浜東北線 西川口駅・蕨駅／埼玉高速鉄道 鳩ヶ谷駅</dd>
+      </div>
+      <div>
+        <dt>電話</dt><dd>048-268-3289</dd>
+        <dt>メール</dt><dd>kijitora.sai@nifty.com</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>キジトラ革工房（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.1});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

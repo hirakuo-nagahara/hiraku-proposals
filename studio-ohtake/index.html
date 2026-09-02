@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スタジオ大竹 ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --black:#141414;
+    --gold:#c8a35a;
+    --paper:#f7f5f1;
+    --grey:#7d7d7d;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--black);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;}
+  .notice{background:#e9e4d8;color:#6b5a2a;text-align:center;font-size:.76rem;padding:6px;}
+
+  header{position:sticky;top:0;z-index:60;background:var(--black);}
+  .nav-wrap{max-width:1160px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{color:#fff;font-size:1.15rem;letter-spacing:.14em;font-weight:700;}
+  .brand .gold{color:var(--gold);}
+  nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  nav a{color:#ddd;text-decoration:none;font-size:.8rem;letter-spacing:.02em;}
+  nav a:hover{color:var(--gold);}
+
+  .hero{background:var(--black);color:#fff;padding:70px 24px 60px;text-align:center;position:relative;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%, rgba(200,163,90,.15), transparent 60%);}
+  .hero-inner{position:relative;z-index:2;}
+  .hero .kicker{color:var(--gold);letter-spacing:.3em;font-size:.72rem;font-weight:700;opacity:0;animation:fadeUp .8s .1s forwards;}
+  .hero h1{font-size:clamp(1.9rem,4.4vw,2.9rem);margin:16px 0;font-weight:300;opacity:0;animation:fadeUp .8s .3s forwards;}
+  .hero p{max-width:520px;margin:0 auto;color:#c9c9c9;font-size:.9rem;opacity:0;animation:fadeUp .8s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+  section{padding:64px 24px;}
+  .inner{max-width:1160px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .section-head{text-align:center;margin-bottom:36px;}
+  .section-head .tag{color:var(--gold);letter-spacing:.2em;font-size:.72rem;font-weight:700;}
+  .section-head h2{font-size:1.6rem;margin:6px 0 0;font-weight:400;}
+
+  .menu-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media(max-width:800px){.menu-gallery{grid-template-columns:repeat(2,1fr);}}
+  .menu-tile{
+    aspect-ratio:1/1;background:linear-gradient(160deg,#dcdcdc,#a9a9a9);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:.82rem;color:#222;
+    position:relative;overflow:hidden;cursor:default;filter:grayscale(60%);transition:filter .4s ease, transform .4s ease;
+  }
+  .menu-tile:hover{filter:grayscale(0%);transform:scale(1.03);}
+  .menu-tile span{position:relative;z-index:2;font-weight:700;background:rgba(255,255,255,.75);padding:4px 8px;border-radius:3px;}
+
+  .service-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+  .service-item{border-right:1px solid #ddd;border-bottom:1px solid #ddd;padding:22px 20px;background:#fff;transition:background .25s;}
+  .service-item:hover{background:#faf5ea;}
+  .service-item .t{font-weight:700;font-size:.92rem;}
+  .service-item .d{font-size:.8rem;color:var(--grey);margin-top:6px;}
+
+  .story{max-width:760px;margin:0 auto;text-align:center;font-size:.92rem;color:#444;line-height:2;}
+
+  .stat-band{background:var(--black);color:#fff;border-radius:0;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center;}
+  .stat-band .num{font-size:2rem;font-weight:800;color:var(--gold);}
+  .stat-band .label{font-size:.76rem;color:#bbb;margin-top:4px;}
+
+  .access-box{background:#fff;border-radius:0;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:.9rem;border:1px solid #ddd;}
+  @media(max-width:700px){.access-box{grid-template-columns:1fr;}}
+  .access-box dt{color:var(--grey);font-size:.75rem;}
+  .access-box dd{margin:2px 0 14px;}
+
+  footer{background:var(--black);color:#999;padding:30px 24px;text-align:center;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">STUDIO <span class="gold">OHTAKE</span></div>
+    <nav>
+      <ul>
+        <li><a href="#menu">撮影メニュー</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="kicker">EDOGAWA MIZUE / PHOTO STUDIO</div>
+    <h1>本格写真館として、<br>人生の節目を残す。</h1>
+    <p>東京都江戸川区瑞江、駅から徒歩3分。成人式・七五三・宮参りから証明写真まで、貸衣装・ヘアメイク・着付け完備の写真スタジオです。</p>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">MENU</div>
+      <h2>撮影メニュー</h2>
+    </div>
+    <div class="menu-gallery reveal">
+      <div class="menu-tile"><span>成人式</span></div>
+      <div class="menu-tile"><span>七五三</span></div>
+      <div class="menu-tile"><span>宮参り</span></div>
+      <div class="menu-tile"><span>卒業袴</span></div>
+      <div class="menu-tile"><span>入園入学</span></div>
+      <div class="menu-tile"><span>金婚・還暦</span></div>
+      <div class="menu-tile"><span>肖像写真</span></div>
+      <div class="menu-tile"><span>証明写真</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="service" style="background:#efece4;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">SERVICE</div>
+      <h2>サービス内容</h2>
+    </div>
+    <div class="service-band reveal">
+      <div class="service-item"><div class="t">貸衣装</div><div class="d">振袖・袴・七五三衣装など多数ご用意</div></div>
+      <div class="service-item"><div class="t">ヘアメイク・着付け</div><div class="d">本格スタッフによる美容フルサポート</div></div>
+      <div class="service-item"><div class="t">オーディションフォト</div><div class="d">就職証明・見合い写真にも対応</div></div>
+      <div class="service-item"><div class="t">復元複写・メモリアルアート</div><div class="d">大切な一枚を美しく残します</div></div>
+      <div class="service-item"><div class="t">ペットフォト</div><div class="d">ご家族の一員も一緒に撮影</div></div>
+      <div class="service-item"><div class="t">出張撮影</div><div class="d">ピアノ発表会などご要望に応じて</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ABOUT</div>
+      <h2>スタジオについて</h2>
+    </div>
+    <p class="story reveal">代表フォトグラファー・大竹政資。愛らしい笑顔、豊かな表現力と高度な修整技術で、地域の皆様に長くご利用いただいています。千葉県など関東地区、遠方からのお客様も多数。季節ごとのキャンペーンもご用意していますので、お気軽にお問い合わせください。</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="inner">
+    <div class="stat-band reveal">
+      <div><div class="num" data-count="3">0分</div><div class="label">駅から徒歩</div></div>
+      <div><div class="num" data-count="10">0+</div><div class="label">撮影メニュー数</div></div>
+      <div><div class="num" data-count="1">貸衣装<br>完備</div><div class="label">ヘアメイク・着付けも常設</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="access" style="background:#efece4;">
+  <div class="inner">
+    <div class="section-head reveal">
+      <div class="tag">ACCESS</div>
+      <h2>アクセス</h2>
+    </div>
+    <div class="access-box reveal">
+      <div>
+        <dt>住所</dt><dd>〒132-0011 東京都江戸川区瑞江2-15-15</dd>
+        <dt>電話</dt><dd>03-5666-1355</dd>
+      </div>
+      <div>
+        <dt>定休日</dt><dd>毎週水曜・木曜</dd>
+        <dt>アクセス</dt><dd>瑞江駅から徒歩3分</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>スタジオ大竹（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+
+  const counters = document.querySelectorAll('.stat-band .num[data-count]');
+  const cio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el = e.target;
+        const target = parseInt(el.dataset.count,10);
+        if(!isNaN(target) && el.textContent.trim().match(/^0/)){
+          const suffix = el.textContent.trim().replace(/^0/, '');
+          let cur = 0;
+          const step = Math.max(1, Math.round(target/30));
+          const timer = setInterval(()=>{
+            cur += step;
+            if(cur >= target){ cur = target; clearInterval(timer); }
+            el.textContent = cur + suffix;
+          }, 30);
+        }
+        cio.unobserve(el);
+      }
+    });
+  },{threshold:.6});
+  counters.forEach(c=>cio.observe(c));
+</script>
+</body>
+</html>

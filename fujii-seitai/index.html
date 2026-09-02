@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>フジイ整体院 ｜ デザイン提案サンプル</title>
+<style>
+  :root{
+    --ink:#2c2620;
+    --paper:#faf6ef;
+    --rust:#a3492f;
+    --rust-deep:#7c3620;
+    --line:#e3d9c6;
+    --olive:#5b6b4f;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    line-height:1.9;
+  }
+  .notice{background:#efe6d3;color:#6b5a2a;text-align:center;font-size:.76rem;padding:6px;letter-spacing:.03em;font-family:sans-serif;}
+  header{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:40;}
+  .nav-wrap{max-width:1040px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .brand{font-size:1.1rem;letter-spacing:.12em;font-weight:700;}
+  .brand em{font-style:normal;color:var(--rust);}
+  nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-family:sans-serif;}
+  nav a{color:var(--ink);text-decoration:none;font-size:.82rem;letter-spacing:.03em;border-bottom:1px solid transparent;transition:.25s;}
+  nav a:hover{border-color:var(--rust);}
+
+  .masthead{max-width:1040px;margin:0 auto;padding:60px 20px 40px;text-align:center;}
+  .kicker{font-family:sans-serif;letter-spacing:.3em;color:var(--rust);font-size:.72rem;font-weight:700;opacity:0;animation:fadeUp .9s .1s forwards;}
+  h1.title{font-size:clamp(2rem,4.4vw,3rem);margin:16px 0;opacity:0;animation:fadeUp .9s .3s forwards;}
+  .sub{max-width:600px;margin:0 auto;color:#5a4f42;font-size:.95rem;opacity:0;animation:fadeUp .9s .5s forwards;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+  .divider{width:60px;height:2px;background:var(--rust);margin:26px auto;opacity:0;animation:fadeUp .9s .6s forwards;}
+
+  section{padding:60px 20px;}
+  .inner{max-width:1040px;margin:0 auto;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  .lead-block{
+    display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0;
+  }
+  @media(max-width:760px){.lead-block{grid-template-columns:1fr;}}
+  .lead-block .num-big{font-size:3.2rem;color:var(--rust);font-weight:300;line-height:1;}
+  .lead-block .num-big .sm{font-family:sans-serif;font-size:.9rem;display:block;color:#7a6f5e;letter-spacing:.1em;margin-top:6px;}
+
+  h2.section-title{font-size:1.5rem;margin:0 0 26px;position:relative;padding-bottom:12px;}
+  h2.section-title::after{content:"";position:absolute;left:0;bottom:0;width:38px;height:2px;background:var(--rust);}
+
+  .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  .case-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 24px;background:#fff;transition:background .3s ease;}
+  .case-card:hover{background:#fbf3ea;}
+  .case-card .who{font-family:sans-serif;font-size:.78rem;letter-spacing:.08em;color:var(--rust);font-weight:700;}
+  .case-card h4{margin:8px 0 10px;font-size:1.02rem;font-weight:500;}
+  .case-card p{font-size:.86rem;color:#5a4f42;margin:0;}
+  .case-card .method{margin-top:12px;font-family:sans-serif;font-size:.72rem;color:#8a7c66;background:#f3ead9;display:inline-block;padding:4px 10px;border-radius:2px;}
+
+  table.menu{width:100%;border-collapse:collapse;background:#fff;}
+  table.menu th,table.menu td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:.9rem;}
+  table.menu th{font-family:sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.06em;color:#7a6f5e;border-bottom:2px solid var(--rust);}
+  table.menu td.price{color:var(--rust-deep);font-weight:700;white-space:nowrap;font-family:sans-serif;}
+
+  .ticket-note{margin-top:18px;background:#f3ead9;padding:18px 20px;font-size:.85rem;border-left:3px solid var(--olive);}
+
+  .discount-box{
+    margin-top:30px;background:var(--rust);color:#fff;padding:26px 28px;border-radius:4px;
+  }
+  .discount-box h4{margin:0 0 10px;font-family:sans-serif;font-size:.95rem;letter-spacing:.05em;}
+  .discount-box p{margin:0;font-size:.86rem;line-height:1.7;font-family:sans-serif;}
+  .discount-box .was{text-decoration:line-through;opacity:.7;margin-right:8px;}
+
+  .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;font-family:sans-serif;font-size:.88rem;}
+  @media(max-width:760px){.access-grid{grid-template-columns:1fr;}}
+  .access-grid dt{color:#8a7c66;font-size:.75rem;letter-spacing:.05em;margin-bottom:4px;}
+  .access-grid dd{margin:0 0 18px;}
+
+  footer{border-top:1px solid var(--line);padding:34px 20px;text-align:center;font-family:sans-serif;font-size:.78rem;color:#7a6f5e;}
+</style>
+</head>
+<body>
+<div class="notice">※これはデザイン提案用のサンプルです（実在の店舗様のホームページではありません）</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand"><em>フジイ</em>整体院</div>
+    <nav>
+      <ul>
+        <li><a href="#cases">側湾症について</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="masthead">
+  <div class="kicker">TOKYO SHINAGAWA / SEITAI</div>
+  <h1 class="title">側湾症・姿勢の悩みに、<br>経絡指圧と操体法で向き合う。</h1>
+  <p class="sub">東急線・りんかい線・JR大井町駅から徒歩4分。ボキボキとした施術ではなく、経絡指圧・操体法・関節アプローチ・オイルマッサージを組み合わせた整体法で、側湾症のケアと美容整体を行っています。</p>
+  <div class="divider"></div>
+</div>
+
+<section id="cases">
+  <div class="inner">
+    <div class="lead-block reveal">
+      <div class="num-big">4<span class="sm">SYMPTOM CASES<br>症例のご紹介</span></div>
+      <div>
+        <h2 class="section-title">側湾症・骨盤の歪みによる痛みの症例</h2>
+        <p style="margin:0;color:#5a4f42;font-size:.92rem;">学生時代に側湾症と診断されたものの、そのまま社会人になり、腰痛や背中の痛みを感じ始めて来院されるケースが多くあります。以下は実際の施術方針の一例です（効果の出方には個人差があります）。</p>
+      </div>
+    </div>
+
+    <div class="case-grid reveal">
+      <div class="case-card">
+        <div class="who">31歳・女性</div>
+        <h4>学生時代の側湾症、社会人になり腰痛が悪化</h4>
+        <p>中学時代にコルセットを使用、高校で中止したまま社会人に。腰痛・背中の痛みを感じ来院。矯正体操・経絡指圧・オイルマッサージ・操体法を併用し週1回・2時間の治療を実施。</p>
+        <div class="method">週1回×継続治療</div>
+      </div>
+      <div class="case-card">
+        <div class="who">28歳・女性</div>
+        <h4>学生時代からの体の傾きが、痛みとして表面化</h4>
+        <p>大学時代に友人から体の傾きを指摘され側湾を自覚。社会人になり仕事が忙しくなるにつれ痛みが増したため来院。矯正体操・経絡指圧・側湾矯正機等を併用した治療を継続。</p>
+        <div class="method">週1回×2時間</div>
+      </div>
+      <div class="case-card">
+        <div class="who">25歳・女性</div>
+        <h4>コルセット卒業後、疲労時の痛みが慢性化</h4>
+        <p>高校時代に側湾症と診断され3年間コルセットを使用。最近は疲れると背中・腰・脇腹に痛みが出るように。矯正体操を毎日継続しながら通院中。</p>
+        <div class="method">継続来院中</div>
+      </div>
+      <div class="case-card">
+        <div class="who">9歳・小学4年生</div>
+        <h4>運動を続けながら側湾の進行をケアしたい</h4>
+        <p>保護者様同伴で来院。ご本人の「良くなりたい」という意思とご両親の協力のもと、矯正体操・経絡整体・操体法を週1回、自宅でも継続。</p>
+        <div class="method">親子で継続</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#f3ead9;">
+  <div class="inner">
+    <h2 class="section-title reveal">メニュー・料金</h2>
+    <table class="menu reveal">
+      <tr><th>コース</th><th>時間</th><th>料金</th></tr>
+      <tr><td>整体治療コース（側湾症を含む）</td><td>60分</td><td class="price">6,000円</td></tr>
+      <tr><td>疲労回復コース</td><td>30分</td><td class="price">3,000円</td></tr>
+      <tr><td>美容整体コース</td><td>80分</td><td class="price">8,000円</td></tr>
+      <tr><td>O脚・X脚矯正コース</td><td>約90分</td><td class="price">8,000円</td></tr>
+      <tr><td>美脚矯正コース</td><td>約120分</td><td class="price">10,000円</td></tr>
+      <tr><td>美脚コース</td><td>約60分</td><td class="price">6,000円</td></tr>
+    </table>
+    <div class="ticket-note reveal">回数券もご用意しています（例：整体治療コース60分×5回 25,000円／60分×10回 40,000円）。O脚・X脚矯正、美脚矯正にはモニター料金もございますので、お気軽にお問い合わせください。</div>
+    <div class="discount-box reveal">
+      <h4>ホームページ閲覧特典（初回限定）</h4>
+      <p>「ホームページを見た」とお伝えいただくと、初回に限り整体治療コース60分が <span class="was">6,000円</span> 4,500円、美容整体コース80分が <span class="was">8,000円</span> 6,500円になります。</p>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="inner">
+    <h2 class="section-title reveal">アクセス・ご予約</h2>
+    <div class="access-grid reveal">
+      <div>
+        <dt>住所</dt><dd>東京都品川区大井1-20-13</dd>
+        <dt>アクセス</dt><dd>東急線・りんかい線・JR線 大井町駅から徒歩4分</dd>
+        <dt>電話／FAX</dt><dd>TEL 03-6671-2877／FAX 03-3775-7254</dd>
+      </div>
+      <div>
+        <dt>営業時間</dt><dd>9:00〜23:00（予約受付は21:00まで）</dd>
+        <dt>定休日</dt><dd>毎週火曜日（土日祝日も営業／火曜が祝日の場合は休み）</dd>
+        <dt>予約について</dt><dd>ご予約・ご質問はお電話またはメールにて。キャンセルは前営業日までにお願いしております。</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>フジイ整体院（デザイン提案サンプル） ／ 本ページはモックアップ制作会社によるデザイン提案用に作成されたものです。</p>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
