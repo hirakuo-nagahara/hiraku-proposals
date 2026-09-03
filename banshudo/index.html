@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>株式会社ビジネス萬秀堂｜十条銀座の文房具店</title>
+<style>
+  :root{
+    --ink:#1c2b45; --ink-soft:#3a4a68; --paper:#faf6ec; --paper-deep:#f1ead6;
+    --gold:#b8863b; --gold-light:#d9b678; --line:#ddd3ba;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Mincho ProN","YuMincho",serif;background:var(--paper);color:var(--ink);line-height:1.9;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1080px;margin:0 auto;padding-inline:24px;}
+  .disclaimer{background:var(--ink);color:#fff;text-align:center;font-size:12.5px;padding:8px;letter-spacing:.05em;}
+  header{position:sticky;top:0;background:rgba(250,246,236,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:50;}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:14px;}
+  .brand{font-size:20px;font-weight:700;letter-spacing:.08em;}
+  .brand small{display:block;font-size:11px;color:var(--gold);letter-spacing:.2em;font-family:sans-serif;}
+  nav ul{display:none;list-style:none;gap:28px;font-size:14px;}
+  @media(min-width:720px){nav ul{display:flex;}}
+  nav a{text-decoration:none;}
+
+  .hero{position:relative;padding:100px 0 80px;text-align:center;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 20% 20%, rgba(184,134,59,.12), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(28,43,69,.08), transparent 45%);}
+  .hero-eyebrow{position:relative;font-family:sans-serif;letter-spacing:.3em;font-size:12px;color:var(--gold);margin-bottom:18px;}
+  .hero h1{position:relative;font-size:clamp(30px,5vw,48px);font-weight:700;margin-bottom:18px;}
+  .hero p{position:relative;font-size:16px;color:var(--ink-soft);max-width:34em;margin:0 auto 32px;}
+  .stat-row{position:relative;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:40px;}
+  .stat{text-align:center;}
+  .stat .num{font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;}
+  .stat .label{font-size:12.5px;color:var(--ink-soft);font-family:sans-serif;letter-spacing:.05em;}
+
+  section{padding:80px 0;}
+  .section-head{text-align:center;margin-bottom:48px;}
+  .section-head .eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.25em;color:var(--gold);margin-bottom:10px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,32px);}
+
+  .soft{background:var(--paper-deep);}
+
+  .grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:2px 18px 2px 18px;padding:28px 26px;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease,border-color .35s ease;}
+  .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 40px rgba(28,43,69,.12);}
+  .card .icon{width:42px;height:42px;border-radius:50%;background:var(--paper-deep);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;margin-bottom:16px;}
+  .card h3{font-size:17px;margin-bottom:10px;}
+  .card p{font-size:14px;color:var(--ink-soft);}
+
+  .timeline{max-width:640px;margin:0 auto;border-left:2px solid var(--gold-light);padding-left:28px;display:flex;flex-direction:column;gap:28px;}
+  .timeline .item{position:relative;}
+  .timeline .item::before{content:"";position:absolute;left:-34px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--gold);}
+  .timeline .year{font-family:sans-serif;font-weight:700;color:var(--gold);font-size:13px;letter-spacing:.05em;}
+  .timeline .desc{font-size:14.5px;color:var(--ink-soft);}
+
+  .info-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:720px){.info-grid{grid-template-columns:1fr 1fr;}}
+  .info-box{background:#fff;border:1px solid var(--line);padding:26px;border-radius:10px;}
+  .info-box h3{font-size:15px;margin-bottom:14px;color:var(--gold);font-family:sans-serif;letter-spacing:.05em;}
+  .info-box ul{list-style:none;font-size:14px;color:var(--ink-soft);display:flex;flex-direction:column;gap:8px;}
+  .pay-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .pay-tags span{font-family:sans-serif;font-size:12px;background:var(--paper-deep);padding:5px 12px;border-radius:20px;color:var(--ink-soft);}
+
+  .news-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;}
+  .news-item{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .news-item .date{font-family:sans-serif;color:var(--gold);flex-shrink:0;width:110px;font-size:12.5px;}
+
+  .cta{text-align:center;background:var(--ink);color:#f1ead6;padding:90px 0;}
+  .cta h2{font-size:clamp(24px,3.4vw,32px);margin-bottom:16px;}
+  .cta p{color:#c9c2ab;margin-bottom:32px;}
+  .btn{display:inline-block;background:var(--gold);color:#1c2b45;font-weight:700;padding:14px 32px;border-radius:26px;text-decoration:none;font-family:sans-serif;font-size:14px;letter-spacing:.05em;transition:transform .2s ease;}
+  .btn:hover{transform:translateY(-2px);}
+
+  footer{padding:32px 0;text-align:center;font-size:12px;color:var(--ink-soft);font-family:sans-serif;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
+  .reveal.is-visible{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の店舗様の情報をもとに作成した、Web制作のご提案サンプルです。</div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">萬秀堂<small>BUSINESS BANSHUDO CO.,LTD.</small></div>
+    <nav><ul>
+      <li><a href="#about">当店について</a></li>
+      <li><a href="#products">商品案内</a></li>
+      <li><a href="#gaisho">外商部</a></li>
+      <li><a href="#info">ご利用案内</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">TOKYO JUJO GINZA · SINCE 1959</p>
+    <h1>十条銀座で、文房具一筋。</h1>
+    <p>良い文房具は、永く使えて、飽きが来ない。株式会社ビジネス萬秀堂は、東京都北区・十条銀座商店街のアーケード内で、こだわりの国内外文具を取り揃えて66年。店頭販売はもちろん、官公庁・学校・企業様への事務用品の配達納品も承っております。</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">66</div><div class="label">創業からの年数</div></div>
+      <div class="stat"><div class="num">1959</div><div class="label">創業・昭和34年</div></div>
+      <div class="stat"><div class="num">3</div><div class="label">代目まで続く歴史</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">HISTORY</p>
+      <h2>萬秀堂のあゆみ</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="item"><div class="year">昭和34年（1959）</div><div class="desc">板橋区仲宿の仲宿商店街にて、岸昭二が萬秀堂を開店。</div></div>
+      <div class="item"><div class="year">昭和47年（1972）</div><div class="desc">首都高速5号線建設に伴い、東京都北区十条仲原（十条銀座東通り）へ移転。文具事務用品の店頭販売を開始。</div></div>
+      <div class="item"><div class="year">昭和61年（1986）</div><div class="desc">東京都北区指定納入業者となる。</div></div>
+      <div class="item"><div class="year">昭和62年（1987）</div><div class="desc">株式会社ビジネス萬秀堂に組織変更。</div></div>
+      <div class="item"><div class="year">現在</div><div class="desc">代表 岸純男のもと、十条銀座のアーケード内で、良い文房具にこだわった店づくりを続けています。</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">PRODUCTS</p>
+      <h2>取り扱い商品</h2>
+    </div>
+    <div class="grid reveal">
+      <div class="card"><div class="icon">✒</div><h3>万年筆</h3><p>国内外の有名メーカー品を中心に、こだわりの万年筆を店内ぎっしりと展示販売。東京限定の限定モデルも入荷。</p></div>
+      <div class="card"><div class="icon">✎</div><h3>シャープペンシル・おすすめ文具</h3><p>壊れにくく飽きの来ない、地球環境にもやさしい文具を厳選。100均で扱うメーカー品は置いておりません。</p></div>
+      <div class="card"><div class="icon">✺</div><h3>面白文具館・新製品コーナー</h3><p>大谷翔平選手のカレンダーやオーナメント、話題の新商品も随時入荷。掘り出し物との出会いをお楽しみください。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gaisho">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">FOR BUSINESS</p>
+      <h2>外商部について</h2>
+    </div>
+    <div class="grid reveal" style="grid-template-columns:1fr;max-width:720px;margin:0 auto;">
+      <div class="card">
+        <p>当店には外商部があり、近隣の官公庁・教育施設・民間企業様などへ、事務用品をはじめ、机・いすなどの什器、コピー機・複合機・シュレッダーなどの事務機器、トナーなどのOA関連品を配達納品しております。まとめてのご発注や定期納品のご相談も承ります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="info">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">SHOP INFO</p>
+      <h2>ご利用案内</h2>
+    </div>
+    <div class="info-grid reveal">
+      <div class="info-box">
+        <h3>営業時間・所在地</h3>
+        <ul>
+          <li>月〜金：10:00〜19:00</li>
+          <li>土・祝：10:00〜18:00（臨時休業あり）</li>
+          <li>日曜日：休業</li>
+          <li>東京都北区十条仲原1-1-1（アーケード内東通り）</li>
+          <li>TEL 03-3906-6956 ／ FAX 03-3906-6926</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>お支払い方法</h3>
+        <p style="font-size:14px;color:var(--ink-soft);">現金・各種クレジットカード・各種電子マネー・交通系ICカード・十条銀座商品券に対応しております。</p>
+        <div class="pay-tags">
+          <span>現金</span><span>クレジットカード</span><span>電子マネー</span><span>交通系IC</span><span>十条銀座商品券</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">NEWS</p>
+      <h2>お知らせ</h2>
+    </div>
+    <div class="news-list reveal">
+      <div class="news-item"><span class="date">2025.12.01</span><span>お支払い方法に電子決済サービスが使えるようになりました。</span></div>
+      <div class="news-item"><span class="date">2025.12.01</span><span>大谷翔平選手の純正カレンダーを発売開始しました。</span></div>
+      <div class="news-item"><span class="date">2024.10.12</span><span>大谷翔平選手のオーナメント（MLB公認）が入荷しました。</span></div>
+      <div class="news-item"><span class="date">2023.09.26</span><span>SGマーク付き自転車用ヘルメットの特価販売を始めました。</span></div>
+      <div class="news-item"><span class="date">2023.06.05</span><span>電子マネーの取り扱いを始めました。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="reveal">この提案について、ご意見をお聞かせください</h2>
+    <p class="reveal">このページは、実際にホームページを制作する際のイメージとしてお作りしたサンプルです。掲載内容の変更点やご要望があれば、お気軽にお申し付けください。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>※本ページはデザイン提案用サンプルであり、株式会社ビジネス萬秀堂様の公式サイトではありません。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var targets = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){targets.forEach(function(t){t.classList.add('is-visible');});return;}
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  targets.forEach(function(t){io.observe(t);});
+
+  var nums = document.querySelectorAll('.stat .num');
+  var done=false;
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !done){
+        done=true;
+        nums.forEach(function(el){
+          var target = parseInt(el.textContent,10);
+          if(isNaN(target))return;
+          var start = performance.now(), dur=1200;
+          function step(now){
+            var p = Math.min((now-start)/dur,1);
+            el.textContent = Math.round(target*(1-Math.pow(2,-10*p)));
+            if(p<1) requestAnimationFrame(step); else el.textContent=target;
+          }
+          requestAnimationFrame(step);
+        });
+        io2.disconnect();
+      }
+    });
+  },{threshold:.5});
+  var statRow = document.querySelector('.stat-row');
+  if(statRow) io2.observe(statRow);
+})();
+</script>
+</body>
+</html>

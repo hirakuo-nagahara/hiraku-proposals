@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鎌倉峰本｜創業100年・そばとお祝い膳の店</title>
+<style>
+  :root{
+    --ink:#2a1f1a; --muted:#6b5a50; --paper:#faf3e8; --paper-deep:#f0e4cf; --vermillion:#9e3b2e; --vermillion-deep:#7a2c22;
+    --gold:#b4924a; --line:#e2d3ba;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Hiragino Mincho ProN","YuMincho",serif;background:var(--paper);color:var(--ink);line-height:1.9;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1080px;margin:0 auto;padding-inline:24px;}
+  .disclaimer{background:var(--vermillion-deep);color:#fff;text-align:center;font-size:12.5px;padding:8px;}
+  header{position:sticky;top:0;background:rgba(250,243,232,.92);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid var(--line);}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding-block:16px;}
+  .brand{font-size:20px;letter-spacing:.1em;color:var(--vermillion-deep);}
+  nav ul{display:none;list-style:none;gap:26px;font-size:13.5px;}
+  @media(min-width:720px){nav ul{display:flex;}}
+
+  .hero{padding:100px 0 80px;position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 25%,rgba(158,59,46,.12),transparent 50%),radial-gradient(circle at 82% 75%,rgba(180,146,74,.14),transparent 50%);}
+  .hero-eyebrow{position:relative;letter-spacing:.32em;font-size:11.5px;color:var(--gold);margin-bottom:20px;}
+  .hero h1{position:relative;font-size:clamp(28px,4.8vw,44px);margin-bottom:20px;}
+  .hero p{position:relative;color:var(--muted);max-width:34em;margin:0 auto 34px;font-size:15px;}
+  .stat-row{position:relative;display:flex;justify-content:center;gap:44px;flex-wrap:wrap;}
+  .stat .num{font-size:clamp(30px,4vw,42px);font-weight:700;color:var(--vermillion);font-variant-numeric:tabular-nums;}
+  .stat .label{font-size:12.5px;color:var(--muted);}
+
+  section{padding:78px 0;}
+  .soft{background:#fff;}
+  .section-head{text-align:center;margin-bottom:46px;}
+  .section-head .eyebrow{font-size:12px;letter-spacing:.25em;color:var(--gold);margin-bottom:10px;}
+  .section-head h2{font-size:clamp(22px,3.2vw,30px);}
+
+  .soup-grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);}
+  @media(min-width:720px){.soup-grid{grid-template-columns:repeat(6,1fr);}}
+  .soup-item{background:var(--paper-deep);border-radius:10px;padding:20px 14px;text-align:center;font-size:13.5px;transition:transform .3s ease,background .3s ease;}
+  .soup-item:hover{transform:translateY(-4px);background:#fff;box-shadow:0 14px 28px rgba(122,44,34,.12);}
+  .soup-note{text-align:center;font-size:13px;color:var(--muted);margin-top:24px;}
+
+  .shop-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:640px){.shop-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:960px){.shop-grid{grid-template-columns:repeat(3,1fr);}}
+  .shop-card{background:#fff;border:1px solid var(--line);border-radius:2px 18px 2px 18px;padding:22px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s ease;}
+  .shop-card:hover{transform:translateY(-5px);border-color:var(--vermillion);}
+  .shop-card h3{font-size:15.5px;margin-bottom:6px;}
+  .shop-card .tel{font-size:13px;color:var(--vermillion);}
+
+  .heritage{max-width:720px;margin:0 auto;text-align:center;background:var(--paper-deep);border-radius:16px;padding:40px 32px;}
+  .heritage p{font-size:14.5px;color:var(--muted);margin-bottom:10px;}
+  .heritage .highlight{color:var(--vermillion-deep);font-size:16.5px;}
+
+  .info-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:720px){.info-grid{grid-template-columns:1fr 1fr;}}
+  .info-box{background:#fff;border:1px solid var(--line);padding:26px;border-radius:10px;}
+  .info-box h3{font-size:14px;color:var(--vermillion-deep);margin-bottom:14px;}
+  .info-box ul{list-style:none;font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:8px;}
+
+  .cta{text-align:center;padding:90px 0;background:linear-gradient(135deg,var(--vermillion-deep),var(--vermillion));color:#fff;}
+  .cta h2{font-size:clamp(22px,3.2vw,30px);margin-bottom:14px;}
+  .cta p{opacity:.92;max-width:32em;margin:0 auto;font-size:14.5px;}
+
+  footer{padding:30px 0;text-align:center;font-size:12px;color:var(--muted);}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
+  .reveal.is-visible{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の店舗様の情報をもとに作成した、Web制作のご提案サンプルです。</div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">鎌倉 峰本</div>
+    <nav><ul>
+      <li><a href="#soup">6つのスープ</a></li>
+      <li><a href="#shops">店舗案内</a></li>
+      <li><a href="#heritage">鎌倉時代の遺構</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">KAMAKURA · TSURUGAOKA HACHIMANGU · SINCE 1924</p>
+    <h1>数寄屋造りに、<br>おもてなしの心を添えて。</h1>
+    <p>鎌倉峰本は、鶴岡八幡宮前に本店を構え、創業大正13年より続くそば・お祝い膳・懐石の店です。2024年、おかげさまで創業100周年を迎えました。個室でのお祝い膳や、団体・旅行会社様向けプランもご用意しています。</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">100</div><div class="label">創業からの年数</div></div>
+      <div class="stat"><div class="num">1924</div><div class="label">創業・大正13年</div></div>
+      <div class="stat"><div class="num">6</div><div class="label">店舗数</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="soup">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">SIGNATURE</p>
+      <h2>6つのスープの御膳せいろ</h2>
+    </div>
+    <div class="soup-grid reveal">
+      <div class="soup-item">醤油</div>
+      <div class="soup-item">塩だし</div>
+      <div class="soup-item">黒酢</div>
+      <div class="soup-item">カレー</div>
+      <div class="soup-item">えびだし</div>
+      <div class="soup-item">旨辛</div>
+    </div>
+    <p class="soup-note reveal">6種類のスープをすべてお楽しみいただけるのは、鎌倉駅から徒歩2分「鎌倉峰本 小町通り店」。それぞれの出汁にあわせた具材を使った創作そばです。名物「揚げそばスナック そばっく」もあわせてどうぞ。</p>
+  </div>
+</section>
+
+<section class="soft" id="shops">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">SHOPS</p>
+      <h2>店舗案内</h2>
+    </div>
+    <div class="shop-grid reveal">
+      <div class="shop-card"><h3>本店（鶴岡八幡宮前）</h3><div class="tel">0467-22-2795</div></div>
+      <div class="shop-card"><h3>朝比奈店</h3><div class="tel">0467-24-5544</div></div>
+      <div class="shop-card"><h3>小町通り店</h3><div class="tel">0467-23-6161</div></div>
+      <div class="shop-card"><h3>平塚店</h3><div class="tel">0463-54-4300</div></div>
+      <div class="shop-card"><h3>東戸塚店</h3><div class="tel">045-823-6418</div></div>
+      <div class="shop-card"><h3>戸塚駅前店</h3><div class="tel">045-864-1081</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="heritage">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">HERITAGE</p>
+      <h2>鎌倉時代800年前の遺構</h2>
+    </div>
+    <div class="heritage reveal">
+      <p class="highlight">本社ビル1階「北条泰時邸跡」を、どなたでも無料でご覧いただけます。</p>
+      <p>歴史の転換点「承久の乱」の出発地点でもあるこの遺構を、弊社にて保存管理しております。鎌倉の武家屋敷は現存せずとも、この地下には800年前の鎌倉の街が眠っています。鎌倉へお越しの際は、ぜひお立ち寄りください。</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">CONTACT</p>
+      <h2>ご予約・お問い合わせ</h2>
+    </div>
+    <div class="info-grid reveal">
+      <div class="info-box">
+        <h3>代表番号・所在地</h3>
+        <ul>
+          <li>TEL：0467-22-4431（代表）</li>
+          <li>鎌倉市雪ノ下1-12-5 M'sArk KAMAKURA 1F</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>各種プランについて</h3>
+        <ul>
+          <li>個室でのお祝い膳を承っております。</li>
+          <li>学校団体様・旅行会社様向けの専用プランもご用意しています。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="reveal">この提案について、ご意見をお聞かせください</h2>
+    <p class="reveal">このページは、実際にホームページを制作する際のイメージとしてお作りしたサンプルです。掲載内容の変更点やご要望があれば、お気軽にお申し付けください。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>※本ページはデザイン提案用サンプルであり、鎌倉峰本様の公式サイトではありません。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var targets = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){targets.forEach(function(t){t.classList.add('is-visible');});return;}
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);} });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  targets.forEach(function(t){io.observe(t);});
+
+  var nums = document.querySelectorAll('.stat .num');
+  var done=false;
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !done){
+        done=true;
+        nums.forEach(function(el){
+          var target = parseInt(el.textContent,10);
+          if(isNaN(target))return;
+          var start = performance.now(), dur=1200;
+          function step(now){
+            var p = Math.min((now-start)/dur,1);
+            el.textContent = Math.round(target*(1-Math.pow(2,-10*p)));
+            if(p<1) requestAnimationFrame(step); else el.textContent=target;
+          }
+          requestAnimationFrame(step);
+        });
+        io2.disconnect();
+      }
+    });
+  },{threshold:.5});
+  var statRow = document.querySelector('.stat-row');
+  if(statRow) io2.observe(statRow);
+})();
+</script>
+</body>
+</html>
