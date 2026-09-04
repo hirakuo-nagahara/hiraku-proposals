@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>諏訪湖の川魚・うなぎ｜丸平川魚店</title>
+<style>
+:root{
+  --bg:#0e1b1c; --panel:#152728; --line:#284040; --text:#eaf3f0;
+  --sub:#a9c4bd; --teal:#2e8f83; --teal2:#5fc9b8; --wood:#8a5a3c;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.85;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#1c3532; color:#cdece5; text-align:center; font-size:.78rem; padding:8px 12px;}
+header{position:sticky; top:0; z-index:50; background:rgba(14,27,28,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.1em; color:var(--teal2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--teal2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--teal2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(95,201,184,0.15), transparent 55%), var(--bg);}
+.eyebrow{letter-spacing:.35em; color:var(--teal2); font-size:.72rem; margin-bottom:18px;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.06em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px;}
+.cta{display:inline-block; background:var(--teal); color:#fff; padding:13px 36px; font-size:.85rem; letter-spacing:.12em; transition:all .3s;}
+.cta:hover{background:var(--teal2); color:#0e1b1c;}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--teal2); font-size:.7rem;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(150deg,#1c3532,#0e1b1c); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--sub); font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem;}
+
+.menu-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.menu-card{background:var(--panel); border:1px solid var(--line); padding:22px; transition:transform .3s, border-color .3s;}
+.menu-card:hover{transform:translateY(-6px); border-color:var(--teal);}
+.menu-card h3{color:var(--teal2); font-size:1rem; margin-bottom:8px;}
+.menu-card p{color:var(--sub); font-size:.82rem;}
+
+.hours-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.hours-table th,.hours-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.hours-table th{background:var(--panel); color:var(--teal2); font-weight:normal;}
+
+.notice-box{background:var(--panel); border:1px solid var(--teal); padding:22px 26px; font-size:.86rem; color:var(--sub); margin-top:20px;}
+.notice-box b{color:var(--teal2);}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem;}
+footer .fbrand{color:var(--teal2); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .menu-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.menu-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の丸平川魚店様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">丸平川魚店<span>MARUHEI KAWAUO</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#menu">商品案内</a></li>
+      <li><a href="#hours">営業時間</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">SUWAKO LAKE, NAGANO</div>
+  <h1>信州諏訪湖の旬を、<br>そのままお持ち帰り。</h1>
+  <p>湖魚・川魚・うなぎ専門店。<br>うな重・うなぎ弁当から、わかさぎ佃煮まで。</p>
+  <a class="cta" href="#menu">商品を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">お店・湖の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>長野県茅野市、諏訪湖のほとりにある湖魚・川魚・うなぎの専門店です。国産の活うなぎを使用し、丸平の味をご家庭でもお楽しみいただけます。</p>
+        <p>うな重・うなぎ弁当のほか、諏訪湖産わかさぎの佃煮（紅梅煮）、鯉旨煮・姿煮、ふな雀焼・甘露煮、川えび佃煮、ニジマス・鮎の塩焼きなど、湖の恵みを豊富に取り揃えています。</p>
+        <p>ご家庭の食卓に、ご宴会に、お土産に。宅配による地方発送もクール便で承っております。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">MENU</div><h2>商品案内</h2></div>
+    <div class="menu-grid reveal">
+      <div class="menu-card"><h3>うなぎ弁当・うな重</h3><p>国産活うなぎ使用。250g超の太めのうなぎを三つ切りにして、2切れ付けでご提供。要予約。</p></div>
+      <div class="menu-card"><h3>うなぎ蒲焼（お持ち帰り）</h3><p>丸平の味をご家庭の食卓に。宅配による地方発送もクール便で承っています。</p></div>
+      <div class="menu-card"><h3>わかさぎ紅梅煮（佃煮）</h3><p>諏訪湖産わかさぎを使った、当店一押しの佃煮です。</p></div>
+      <div class="menu-card"><h3>鯉旨煮・姿煮</h3><p>湖の恵みを丁寧に炊き上げた一品。</p></div>
+      <div class="menu-card"><h3>ふな雀焼・甘露煮／川えび佃煮</h3><p>信州の川魚料理を、昔ながらの製法で。</p></div>
+      <div class="menu-card"><h3>ニジマス甘露煮・塩焼／鮎塩焼</h3><p>湖・川で獲れた魚をそのまま塩焼きに。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">HOURS</div><h2>営業時間</h2></div>
+    <table class="hours-table reveal">
+      <tr><th>お食事処（うな重・うな弁）</th><td>AM11:30〜PM6:00（要予約）</td></tr>
+    </table>
+    <div class="notice-box reveal">
+      <b>お知らせ：</b>2階お食事処は諸事情により現在休業中です。お持ち帰り商品・オンラインショッピングは通常通りご利用いただけます。
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>店名</th><td>丸平川魚店</td></tr>
+      <tr><th>所在地</th><td>〒391　長野県茅野市ちの3076</td></tr>
+      <tr><th>TEL / FAX</th><td>0266-72-2466</td></tr>
+      <tr><th>メール</th><td>maruhei@mvd.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">丸平川魚店</div>
+  <div>長野県茅野市ちの3076　TEL 0266-72-2466</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、丸平川魚店様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

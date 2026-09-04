@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>横丁の小さな古本屋｜古本屋 六月</title>
+<style>
+:root{
+  --bg:#0d1420; --panel:#161f2e; --line:#2a3548; --text:#eef1f5;
+  --sub:#a7b3c4; --gold:#d9b25a; --gold2:#f0d38a; --lamp:#e6b45a;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#1e2a3d; color:#cddcf0; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(13,20,32,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1080px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.12em; color:var(--gold2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--gold2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(circle at 50% 0%, rgba(217,178,90,0.12), transparent 55%), var(--bg);}
+.lamp{width:14px; height:14px; border-radius:50%; background:var(--lamp); margin:0 auto 26px; box-shadow:0 0 20px 8px rgba(230,180,90,0.5);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.1em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:540px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; border:1px solid var(--gold); color:var(--gold2); padding:12px 34px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--gold); color:#0d1420;}
+
+section{padding:86px 24px;}
+.wrap{max-width:1000px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:50px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.75rem; margin-top:10px; letter-spacing:.06em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(160deg,#1c2739,#0d1420); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--sub); font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.shelf{display:flex; gap:8px; justify-content:center; margin:34px 0; flex-wrap:wrap;}
+.spine{width:22px; height:64px; border-radius:2px;}
+
+.hours-table{width:100%; border-collapse:collapse; font-family:sans-serif; font-size:.9rem;}
+.hours-table th,.hours-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.hours-table th{background:var(--panel); color:var(--gold2); font-weight:normal;}
+
+.notice-box{background:var(--panel); border:1px solid var(--gold); padding:22px 26px; font-family:sans-serif; font-size:.86rem; color:var(--sub); margin-top:20px;}
+.notice-box b{color:var(--gold2);}
+
+.sns-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:20px;}
+.sns-chip{border:1px solid var(--line); padding:8px 18px; border-radius:20px; font-family:sans-serif; font-size:.78rem; color:var(--sub); transition:border-color .3s, color .3s;}
+.sns-chip:hover{border-color:var(--gold); color:var(--gold2);}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:140px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--gold2); font-size:1.02rem; margin-bottom:10px; letter-spacing:.1em; font-family:serif;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の古本屋 六月様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">古本屋　六月<span>ROKUGATSU BOOKS</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#hours">営業時間</a></li>
+      <li><a href="#sns">最新情報</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="lamp"></div>
+  <div class="eyebrow">SINCE 2020, MATSUOJI YOKOCHO</div>
+  <h1>横丁の灯りの下、<br>本と出会う。</h1>
+  <p>愛知県岡崎市、松應寺横丁の中にある小さな古本屋です。<br>木・金・土だけ、灯りをともします。</p>
+  <a class="cta" href="#hours">営業時間を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">横丁・店内の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>岡崎市材木町、松應寺の横にある古い木造の横丁の中に、ひっそりと灯りをともす古本屋です。</p>
+        <p>店主が長い時間をかけて集めた本たちが、静かに次の読み手を待っています。何気ない一冊との出会いを、ゆっくりお楽しみください。</p>
+        <p>不定期で店を閉めていることもございますので、あらかじめ各種SNSにて営業状況をご確認いただけますと幸いです。ご予約制の「な畳」もございます。</p>
+      </div>
+    </div>
+    <div class="shelf reveal">
+      <div class="spine" style="background:#7a1f2b;"></div>
+      <div class="spine" style="background:#1f3a5f;"></div>
+      <div class="spine" style="background:#2c4a3a;"></div>
+      <div class="spine" style="background:var(--gold);"></div>
+      <div class="spine" style="background:#4a3626;"></div>
+      <div class="spine" style="background:#5a3f6e;"></div>
+      <div class="spine" style="background:#7a1f2b;"></div>
+      <div class="spine" style="background:#2c4a3a;"></div>
+      <div class="spine" style="background:var(--gold);"></div>
+      <div class="spine" style="background:#1f3a5f;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:var(--panel);">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">HOURS</div><h2>営業時間</h2></div>
+    <table class="hours-table reveal">
+      <tr><th>営業日</th><td>木曜・金曜・土曜</td></tr>
+      <tr><th>営業時間</th><td>14:00〜19:00</td></tr>
+      <tr><th>定休日</th><td>上記以外の曜日</td></tr>
+    </table>
+    <div class="notice-box reveal">
+      <b>不定休のご案内：</b>お店の都合で急に閉めていることがございますので、お出かけ前に各種SNSにて営業状況をご確認いただくことをおすすめします。
+    </div>
+  </div>
+</section>
+
+<section id="sns">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">SOCIAL</div><h2>最新情報・お知らせ</h2></div>
+    <p class="reveal" style="text-align:center; color:var(--sub); font-family:sans-serif; margin-bottom:10px;">
+      日々のできごとや営業状況は、SNSやブログで発信しています。
+    </p>
+    <div class="sns-row reveal">
+      <div class="sns-chip">Twitter (X)</div>
+      <div class="sns-chip">Facebook</div>
+      <div class="sns-chip">Instagram</div>
+      <div class="sns-chip">みせのブログ</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>古本屋　六月</td></tr>
+      <tr><th>所在地</th><td>〒444-0062　愛知県岡崎市材木町42　松應寺横丁内</td></tr>
+      <tr><th>目印</th><td>松應寺の隣、木造アーケードの中</td></tr>
+      <tr><th>メール</th><td>memoaaru@gmail.com（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">古本屋　六月</div>
+  <div>愛知県岡崎市材木町42　松應寺横丁</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、古本屋 六月様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

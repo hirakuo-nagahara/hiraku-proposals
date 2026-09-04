@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競走馬育成牧場｜（有）スピリットファーム</title>
+<style>
+:root{
+  --bg:#0f140f; --panel:#171f16; --line:#2b3529; --text:#eef3ea;
+  --sub:#a9b8a2; --green:#3f6b3a; --green2:#7fae5a; --sand:#c9a15a;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.85;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#1e2a1c; color:#cfe0c8; text-align:center; font-size:.78rem; padding:8px 12px;}
+header{position:sticky; top:0; z-index:50; background:rgba(15,20,15,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.15rem; letter-spacing:.1em; color:var(--green2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--green2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--green2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(127,174,90,0.15), transparent 55%), var(--bg);}
+.eyebrow{letter-spacing:.35em; color:var(--sand); font-size:.72rem; margin-bottom:18px;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.06em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px;}
+.cta{display:inline-block; border:1px solid var(--green2); color:var(--green2); padding:12px 34px; font-size:.85rem; letter-spacing:.15em; transition:all .3s;}
+.cta:hover{background:var(--green2); color:#0f140f;}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--sand); font-size:.7rem;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; background:var(--panel); border:1px solid var(--line); padding:36px 20px;}
+.stat{text-align:center;}
+.stat .num{font-size:2rem; color:var(--green2); font-weight:bold;}
+.stat .label{color:var(--sub); font-size:.76rem; margin-top:6px;}
+
+.location-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.loc-card{background:var(--panel); border:1px solid var(--line); padding:28px; transition:transform .3s;}
+.loc-card:hover{transform:translateY(-6px);}
+.loc-card h3{color:var(--green2); margin-bottom:10px; font-size:1.05rem;}
+.loc-card p{color:var(--sub); font-size:.86rem;}
+
+.horse-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.horse-card{background:var(--panel); border:1px solid var(--line); padding:20px; text-align:center; transition:transform .3s, border-color .3s;}
+.horse-card:hover{transform:translateY(-6px); border-color:var(--sand);}
+.horse-card .silk{width:40px; height:40px; border-radius:50%; margin:0 auto 12px; background:linear-gradient(135deg, var(--green), var(--sand));}
+.horse-card h4{font-size:.95rem; margin-bottom:4px; color:var(--green2);}
+.horse-card p{color:var(--sub); font-size:.76rem;}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem;}
+footer .fbrand{color:var(--green2); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em;}
+
+@media(max-width:800px){.stats,.location-grid{grid-template-columns:1fr 1fr;} .horse-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.stats{grid-template-columns:1fr 1fr;} .horse-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在のスピリットファーム様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">スピリットファーム<span>SPIRIT FARM / LITTLE BLUE FARM</span></div>
+    <nav><ul>
+      <li><a href="#about">会社概要</a></li>
+      <li><a href="#location">育成拠点</a></li>
+      <li><a href="#horses">活躍馬</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">TRAINING CENTER SINCE 1998</div>
+  <h1>強い馬をつくる、<br>その一頭のために。</h1>
+  <p>茨城トレーニングセンターと北海道牧場、二つの拠点で。<br>集団調教により、馬の競走精神を養います。</p>
+  <a class="cta" href="#contact">調教・求職のご相談</a>
+</div>
+
+<section>
+  <div class="wrap reveal">
+    <div class="stats">
+      <div class="stat"><div class="num">1998</div><div class="label">設立年</div></div>
+      <div class="stat"><div class="num">10</div><div class="label">スタッフ数</div></div>
+      <div class="stat"><div class="num">2</div><div class="label">育成拠点</div></div>
+      <div class="stat"><div class="num">5+</div><div class="label">主な預託厩舎</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>会社概要</h2></div>
+    <p class="reveal" style="text-align:center; color:var(--sub); max-width:720px; margin:0 auto;">
+      1998年設立。代表・中井大地のもと、奥平厩舎、畠山厩舎、竹内厩舎、金成厩舎、尾関厩舎など、複数の主要厩舎からの預託を受け、育成馬の調教にあたっています。他頭数での集団調教により、馬の競走精神を養うことを大切にしています。
+    </p>
+  </div>
+</section>
+
+<section id="location" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">TRAINING CENTER</div><h2>育成拠点のご紹介</h2></div>
+    <div class="location-grid reveal">
+      <div class="loc-card"><h3>茨城トレーニングセンター</h3><p>集団調教を中心に、実戦を見据えた育成を行う拠点です。TEL 0298-75-1545</p></div>
+      <div class="loc-card"><h3>北海道牧場</h3><p>広大な自然環境の中で、若馬をじっくりと育てる牧場です。TEL 0156-62-4454</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="horses">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ACHIEVEMENTS</div><h2>主な重賞勝馬・活躍馬</h2></div>
+    <div class="horse-grid reveal">
+      <div class="horse-card"><div class="silk"></div><h4>イーグルカフェ</h4><p>主な重賞勝馬</p></div>
+      <div class="horse-card"><div class="silk"></div><h4>サクラプレジデント</h4><p>活躍馬</p></div>
+      <div class="horse-card"><div class="silk"></div><h4>ケイアイチョウサン</h4><p>活躍馬</p></div>
+      <div class="horse-card"><div class="silk"></div><h4>トウショウギア</h4><p>活躍馬</p></div>
+      <div class="horse-card"><div class="silk"></div><h4>エンゲルグレーセ</h4><p>活躍馬</p></div>
+      <div class="horse-card"><div class="silk"></div><h4>ノボバカラ・ウイングレイテスト</h4><p>活躍馬</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:620px;">
+    <div class="section-head reveal"><div class="en">CONTACT</div><h2>会社概要・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>会社名</th><td>有限会社　スピリットファーム</td></tr>
+      <tr><th>代表</th><td>中井大地</td></tr>
+      <tr><th>設立</th><td>1998年</td></tr>
+      <tr><th>拠点</th><td>茨城トレーニングセンター／北海道牧場</td></tr>
+      <tr><th>TEL（北海道）</th><td>0156-62-4454</td></tr>
+      <tr><th>TEL（茨城）</th><td>0298-75-1545</td></tr>
+      <tr><th>メール</th><td>nakai@spfarm.site（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">スピリットファーム</div>
+  <div>茨城トレーニングセンター　TEL 0298-75-1545</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、スピリットファーム様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
