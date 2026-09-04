@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パッチワーク教室と手作り雑貨｜キルトモナミ</title>
+<style>
+:root{
+  --bg:#fdf7f2; --panel:#ffffff; --line:#eadfd4;
+  --text:#4a3a30; --sub:#8a7364; --pink:#e8a6a0; --pink2:#f4cfc9; --sage:#a7b494;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  line-height:1.9;
+}
+a{color:inherit; text-decoration:none;}
+.disclaimer{
+  background:#f4cfc9; color:#6b3a33; text-align:center;
+  font-size:0.78rem; padding:8px 12px; letter-spacing:.02em;
+}
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(253,247,242,0.92); backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.nav-wrap{max-width:1080px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.1em; color:#c97a70; font-weight:bold;}
+.brand span{display:block; font-size:.62rem; color:var(--sub); letter-spacing:.15em;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:#c97a70;}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:#c97a70;transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{
+  position:relative; padding:90px 24px 70px; text-align:center; overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 20%, var(--pink2) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, #e6ecd9 0%, transparent 40%);
+}
+.patch-row{display:flex; justify-content:center; gap:10px; margin-bottom:28px; flex-wrap:wrap;}
+.patch{width:26px; height:26px; border-radius:4px; transform:rotate(6deg);}
+.patch:nth-child(2n){transform:rotate(-6deg);}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem); letter-spacing:.08em; margin-bottom:18px; color:#7a4f45;}
+.hero p{color:var(--sub); font-size:1rem; max-width:520px; margin:0 auto 30px;}
+.cta{
+  display:inline-block; background:var(--pink); color:#fff;
+  padding:13px 36px; border-radius:30px; font-size:.88rem; letter-spacing:.1em;
+  transition:all .3s; box-shadow:0 8px 20px rgba(232,166,160,0.35);
+}
+.cta:hover{background:#c97a70; transform:translateY(-2px);}
+
+section{padding:80px 24px;}
+.wrap{max-width:1040px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:50px;}
+.section-head .en{letter-spacing:.25em; color:var(--pink); font-size:.72rem;}
+.section-head h2{font-size:1.7rem; margin-top:10px; color:#7a4f45; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.concept-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.concept-photo{
+  aspect-ratio:4/3; border-radius:16px;
+  background:repeating-conic-gradient(var(--pink2) 0% 25%, #fff 0% 50%) 0 0/50px 50px;
+  border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+  color:#a1826f; font-size:.8rem; text-align:center; padding:20px;
+}
+.concept-text p{color:var(--sub); margin-bottom:14px; font-size:.95rem;}
+.concept-text .rep{margin-top:20px; font-size:.85rem; color:#7a4f45; border-top:1px dashed var(--line); padding-top:14px;}
+
+.lesson-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.lesson-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:30px;
+  transition:transform .3s, box-shadow .3s;
+}
+.lesson-card:hover{transform:translateY(-6px); box-shadow:0 16px 30px rgba(0,0,0,0.06);}
+.lesson-card h3{color:#c97a70; font-size:1.1rem; margin-bottom:14px;}
+.lesson-card p{color:var(--sub); font-size:.88rem; margin-bottom:10px;}
+.price-list{list-style:none; margin-top:14px;}
+.price-list li{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line); font-size:.86rem;}
+.price-list li span:last-child{color:#c97a70; font-weight:bold;}
+
+.schedule{width:100%; border-collapse:collapse; text-align:center; font-size:.82rem; margin-top:10px;}
+.schedule th,.schedule td{border:1px solid var(--line); padding:10px 6px;}
+.schedule th{background:var(--pink2); color:#7a4f45;}
+.schedule td.on{color:var(--sage); font-weight:bold;}
+
+.goods{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+.goods-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; text-align:center;
+  transition:transform .3s;
+}
+.goods-card:hover{transform:translateY(-6px) rotate(-1deg);}
+.goods-card .ic{width:56px; height:56px; border-radius:50%; margin:0 auto 12px; background:var(--pink2);}
+.goods-card p{font-size:.8rem; color:var(--sub);}
+
+.press{display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
+.press-item{
+  border:1px solid var(--line); border-radius:10px; padding:16px 20px; font-size:.8rem; color:var(--sub);
+  background:var(--panel); max-width:260px;
+}
+.press-item .y{color:var(--pink); font-weight:bold; margin-bottom:4px;}
+
+.info-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.info-table tr{border-bottom:1px solid var(--line);}
+.info-table th{text-align:left; padding:14px 10px; color:var(--sub); width:140px; font-weight:normal;}
+.info-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem;}
+footer .fbrand{color:#c97a70; font-size:1.05rem; margin-bottom:10px; letter-spacing:.08em;}
+
+@media(max-width:800px){
+  .concept-grid,.lesson-grid{grid-template-columns:1fr;}
+  .goods{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在のキルトモナミ様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">キルトモナミ<span>QUILT SHOP &amp; CULTURE</span></div>
+    <nav><ul>
+      <li><a href="#concept">コンセプト</a></li>
+      <li><a href="#lesson">レッスン</a></li>
+      <li><a href="#goods">手作り雑貨</a></li>
+      <li><a href="#press">掲載実績</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="patch-row" id="patchRow"></div>
+  <h1>パッチワークと雑貨を<br>楽しむ、ひととき。</h1>
+  <p>大阪府枚方市、宮之阪駅すぐ。<br>1dayレッスンから月謝制のレギュラーレッスンまで、あなたのペースで。</p>
+  <a class="cta" href="#lesson">レッスンを見てみる</a>
+</div>
+
+<section id="concept">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">CONCEPT</div><h2>手作りが好き。パッチワークが好き。</h2></div>
+    <div class="concept-grid reveal">
+      <div class="concept-photo">教室内・作品の写真<br>（イメージ）</div>
+      <div class="concept-text">
+        <p>可愛い雑貨に囲まれ、パッチワークを楽しむ……キルトモナミは、そんなパッチワーク教室と雑貨のお店です。</p>
+        <p>パッチワークに興味はあるんだけど、という方は1dayレッスンから。レギュラーレッスンは、月に2回ご都合の良い日に習える定期教室です。</p>
+        <p>自分で作るのは苦手だけど、という方も、雑貨やパッチワーク完成品の販売もしていますので、お気軽にお立ち寄りください。</p>
+        <div class="rep">代表：三浦文代（日本手芸普及協会 講師）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lesson" style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">LESSON</div><h2>レッスンのご案内</h2></div>
+    <div class="lesson-grid reveal">
+      <div class="lesson-card">
+        <h3>1day レッスン</h3>
+        <p>始めようか迷っている方は、まずは体験から。2〜3時間で小物を仕上げていただける、講習料なし・材料費のみの体験レッスンです。随時受付中。</p>
+        <ul class="price-list">
+          <li><span>キーケース</span><span>¥800</span></li>
+          <li><span>コースター</span><span>¥600</span></li>
+          <li><span>通帳ケース</span><span>¥1,000</span></li>
+        </ul>
+      </div>
+      <div class="lesson-card">
+        <h3>レギュラーレッスン</h3>
+        <p>月謝制で月2回のお稽古です。教室の設定日が多いので、ご都合の良い日を選べます。初めての方から経験者まで、レベルに合わせた指導で進めていただけます。</p>
+        <ul class="price-list">
+          <li><span>入会金</span><span>¥3,000</span></li>
+          <li><span>月謝</span><span>¥4,000〜（材料費別）</span></li>
+        </ul>
+        <table class="schedule">
+          <tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+          <tr><td>午前</td><td class="on">○</td><td></td><td class="on">○</td><td></td><td class="on">○</td><td class="on">○</td></tr>
+          <tr><td>午後</td><td class="on">○</td><td></td><td class="on">○</td><td class="on">○</td><td class="on">○</td><td class="on">○</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="goods">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">HANDMADE GOODS</div><h2>手作り雑貨</h2></div>
+    <div class="goods reveal">
+      <div class="goods-card"><div class="ic"></div><p>マカロンストラップ</p></div>
+      <div class="goods-card"><div class="ic"></div><p>ピンクッション</p></div>
+      <div class="goods-card"><div class="ic"></div><p>パッチワークポーチ</p></div>
+      <div class="goods-card"><div class="ic"></div><p>完成品バッグ</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="press" style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">MEDIA</div><h2>掲載実績</h2></div>
+    <div class="press reveal">
+      <div class="press-item"><div class="y">2012.4</div>学研インテリアムックにて、作品が掲載されました。</div>
+      <div class="press-item"><div class="y">2011.6</div>パッチワーク通信社の書籍にて、作品が掲載されました。</div>
+      <div class="press-item"><div class="y">2011.7</div>パッチワーク通信社の書籍にて、お店が紹介されました。</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="info-table reveal">
+      <tr><th>住所</th><td>大阪府枚方市宮之阪3丁目6-1</td></tr>
+      <tr><th>最寄駅</th><td>京阪電車交野線 宮之阪駅 下車すぐ</td></tr>
+      <tr><th>営業時間</th><td>10:00〜17:00</td></tr>
+      <tr><th>定休日</th><td>日曜・祝日</td></tr>
+      <tr><th>TEL / FAX</th><td>072-849-2221</td></tr>
+      <tr><th>メール</th><td>monami@tenor.ocn.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+      <tr><th>駐車場</th><td>なし（近隣のコインパーキングをご利用ください）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">キルトモナミ</div>
+  <div>大阪府枚方市宮之阪3丁目6-1　TEL 072-849-2221</div>
+  <div style="margin-top:14px; opacity:.7;">このページはデザイン提案用のサンプルであり、キルトモナミ様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+const colors = ['#e8a6a0','#f4cfc9','#a7b494','#e6ecd9','#d9b48f'];
+const row = document.getElementById('patchRow');
+for(let i=0;i<9;i++){
+  const p = document.createElement('div');
+  p.className='patch';
+  p.style.background = colors[i % colors.length];
+  row.appendChild(p);
+}
+</script>
+</body>
+</html>

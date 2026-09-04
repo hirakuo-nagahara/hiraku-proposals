@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地酒・焼酎専門店｜酒の辰己</title>
+<style>
+:root{
+  --bg:#160c0c; --panel:#221313; --line:#3a2020; --text:#f4ece4;
+  --sub:#c9b3a6; --wine:#7a1f2b; --gold:#c9a24a; --gold2:#e6c878;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#3a2020; color:#f0c9c9; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(22,12,12,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.25rem; letter-spacing:.15em; color:var(--gold2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--gold2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(201,162,74,0.18), transparent 55%), linear-gradient(180deg,#1c0f0f,#160c0c);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem); letter-spacing:.1em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; border:1px solid var(--gold); color:var(--gold2); padding:12px 34px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--gold); color:#160c0c;}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.06em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(135deg,#3a1f24,#7a1f2b); display:flex; align-items:center; justify-content:center; color:#f0d9c9; font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.sake-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.sake-card{background:var(--panel); border:1px solid var(--line); padding:26px 18px; text-align:center; transition:transform .3s, border-color .3s;}
+.sake-card:hover{transform:translateY(-6px); border-color:var(--gold);}
+.sake-card .ico{width:44px; height:44px; margin:0 auto 14px; border-radius:50%; background:linear-gradient(135deg, var(--wine), var(--gold));}
+.sake-card h3{font-size:.95rem; margin-bottom:6px; color:var(--gold2);}
+.sake-card p{color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+
+.notice-box{background:var(--panel); border:1px solid var(--gold); padding:24px 28px; font-family:sans-serif; font-size:.86rem; color:var(--sub); margin-top:20px;}
+.notice-box b{color:var(--gold2);}
+
+.hours-table{width:100%; border-collapse:collapse; font-family:sans-serif; font-size:.88rem;}
+.hours-table th,.hours-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.hours-table th{background:var(--wine); color:#f4ece4; font-weight:normal;}
+
+.payment-row{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:20px;}
+.pay-chip{border:1px solid var(--line); padding:8px 18px; border-radius:20px; font-family:sans-serif; font-size:.78rem; color:var(--sub); transition:border-color .3s, color .3s;}
+.pay-chip:hover{border-color:var(--gold); color:var(--gold2);}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:140px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--gold2); font-size:1.05rem; margin-bottom:10px; letter-spacing:.1em; font-family:serif;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .sake-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の酒の辰己様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">酒の辰己<span>SAKE NO TATSUMI</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#lineup">お酒の種類</a></li>
+      <li><a href="#hours">営業時間</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">SMALL BREWERIES, HONEST TASTE</div>
+  <h1>小さな蔵の、<br>旨い酒を。</h1>
+  <p>横浜・栗田谷、地酒と焼酎の専門店。<br>蔵元を訪ね歩き、その味とエピソードをお届けします。</p>
+  <a class="cta" href="#lineup">お酒の種類を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">店内・酒瓶の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>当店では、各蔵元さまに実際に足を運んで訪問し、数々のエピソードや色々なお酒の情報、また地域の紹介もしています。ぜひ、お店にお立ち寄りください。</p>
+        <p>目印は「栗田谷交差点信号機」、横浜駅より2キロ。店内は、お酒に優しいLEDを照明に使用しています。</p>
+        <p>入荷の少ない銘柄については、セット販売、またはポイントを貯めてからのお買い上げとさせていただいております。詳しくは店頭にてお問い合わせください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lineup" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">LINEUP</div><h2>お酒の種類</h2></div>
+    <div class="sake-grid reveal">
+      <div class="sake-card"><div class="ico"></div><h3>地酒</h3><p>冷酒・常温・燗、お好みの飲み方で</p></div>
+      <div class="sake-card"><div class="ico"></div><h3>焼酎</h3><p>常温・ロック・水割り・お湯割り</p></div>
+      <div class="sake-card"><div class="ico"></div><h3>小さな蔵の一本</h3><p>蔵元訪問だからこそ仕入れられる銘柄</p></div>
+      <div class="sake-card"><div class="ico"></div><h3>試飲（土・日）</h3><p>気になる一本を、まずは試してから</p></div>
+    </div>
+    <div class="notice-box reveal">
+      <b>入荷が少ない銘柄について：</b>村尾・魔王など人気銘柄は入荷が限られるため、セット販売、またはポイントを貯めてのお買い上げとさせていただいております。詳しくは店頭までお問い合わせください。
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">HOURS</div><h2>営業時間・定休日</h2></div>
+    <table class="hours-table reveal">
+      <tr><th>水曜〜土曜</th><td>11:30〜20:00</td></tr>
+      <tr><th>日曜</th><td>11:30〜18:00（時間短縮営業）</td></tr>
+      <tr><th>定休日</th><td>月曜・火曜</td></tr>
+    </table>
+    <div class="payment-row reveal">
+      <div class="pay-chip">クレジットカード</div>
+      <div class="pay-chip">Suica等交通系IC</div>
+      <div class="pay-chip">PayPay</div>
+      <div class="pay-chip">LINE Pay</div>
+      <div class="pay-chip">d払い</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:620px;">
+    <div class="section-head reveal"><div class="en">ACCESS / CONTACT</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>店名</th><td>酒の辰己</td></tr>
+      <tr><th>所在地</th><td>神奈川県横浜市神奈川区斎藤分町53-27</td></tr>
+      <tr><th>目印</th><td>栗田谷交差点信号機（横浜駅より約2km）</td></tr>
+      <tr><th>TEL</th><td>045-491-3333</td></tr>
+      <tr><th>FAX</th><td>045-491-1276</td></tr>
+      <tr><th>駐車場</th><td>店舗隣に1台（譲り合ってご利用ください）</td></tr>
+      <tr><th>メール</th><td>nomnom@msg.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">酒の辰己</div>
+  <div>神奈川県横浜市神奈川区斎藤分町53-27　TEL 045-491-3333</div>
+  <div style="margin-top:14px; opacity:.7;">このページはデザイン提案用のサンプルであり、酒の辰己様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

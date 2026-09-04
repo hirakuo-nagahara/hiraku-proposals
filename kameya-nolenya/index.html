@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本染・オーダーのれん製作｜染元 亀屋染物店（暖簾屋）</title>
+<style>
+:root{
+  --bg:#f7f4ee; --panel:#ffffff; --line:#e2dccb;
+  --text:#2c2620; --sub:#6b6355; --indigo:#1f3a5f; --indigo2:#3c6591; --gold:#b8923f;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#1f3a5f; color:#dce8f2; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(247,244,238,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.15em; color:var(--indigo); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--indigo2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--indigo2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; background:linear-gradient(180deg, #eef1e8, var(--bg));}
+.noren-hang{display:flex; justify-content:center; gap:6px; margin-bottom:34px;}
+.noren-strip{width:34px; height:70px; background:var(--indigo); border-radius:0 0 3px 3px; opacity:.9;}
+.noren-strip:nth-child(3n){background:var(--indigo2);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.1em; margin-bottom:20px; color:var(--indigo);}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; background:var(--indigo); color:#fff; padding:13px 36px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--indigo2);}
+
+section{padding:88px 24px;}
+.wrap{max-width:1040px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.8rem; margin-top:10px; letter-spacing:.06em; color:var(--indigo);}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(135deg,#1f3a5f,#3c6591); display:flex; align-items:center; justify-content:center; color:#dce8f2; font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.gallery{display:grid; grid-template-columns:repeat(5,1fr); gap:14px;}
+.g-card{background:var(--panel); border:1px solid var(--line); padding:20px 10px; text-align:center; transition:transform .3s, box-shadow .3s;}
+.g-card:hover{transform:translateY(-6px); box-shadow:0 14px 26px rgba(31,58,95,0.12);}
+.g-card .swatch{width:48px; height:70px; margin:0 auto 12px; border-radius:2px 2px 6px 6px;}
+.g-card p{font-size:.78rem; color:var(--sub); font-family:sans-serif;}
+
+.price-table{width:100%; border-collapse:collapse; font-size:.86rem; font-family:sans-serif;}
+.price-table th, .price-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.price-table th{background:var(--indigo); color:#fff; font-weight:normal;}
+.price-table td:first-child{text-align:left; color:var(--sub);}
+.price-note{font-family:sans-serif; font-size:.8rem; color:var(--sub); margin-top:16px;}
+
+.technique{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.t-card{background:var(--panel); border:1px solid var(--line); padding:26px; transition:transform .3s;}
+.t-card:hover{transform:translateY(-6px);}
+.t-card h3{color:var(--indigo); margin-bottom:12px; font-size:1rem;}
+.t-card p{color:var(--sub); font-size:.86rem; font-family:sans-serif;}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--indigo); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em; font-family:serif;}
+
+@media(max-width:800px){.about-grid,.technique{grid-template-columns:1fr;} .gallery{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:520px){.gallery{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の亀屋染物店様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">染元　亀屋染物店<span>NOLENYA - HAND-DYED NOREN</span></div>
+    <nav><ul>
+      <li><a href="#about">技法について</a></li>
+      <li><a href="#gallery">のれん見本</a></li>
+      <li><a href="#price">価格表</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="noren-hang" id="norenHang"></div>
+  <div class="eyebrow">HONZOME・SINCE THE EDO ERA</div>
+  <h1>古来伝統の本染めで、<br>一枚だけののれんを。</h1>
+  <p>筒描き染め・型染めによる印染め。ロゴの作成から染め、仕立てまで、オリジナル・オーダーメイドで承ります。</p>
+  <a class="cta" href="#price">価格表を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">TRADITION</div><h2>日本古来の染色技法</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">染物工房・のれんの写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>中世、世界では布地に模様を染め付ける技術はなく、服地は織物で模様を表現していました。日本では戦国時代には旗指物や陣幕など、すでに模様を染めるという文化がありました。</p>
+        <p>もち米と米糠で作る糊を、柿渋で強くした和紙製の筒により、線や文字、模様を自在に描く日本古来伝統の技法「筒描き染め」。型で模様をつける技法を「型染め」といい、家紋や屋号を染め抜くことを「印染め」と呼びます。</p>
+        <p>数多くの木綿・麻生地を用意し、ワンポイントでの染物ならプリント製品よりも格安に製作できます。生地見本は無料でお送りしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">EXAMPLES</div><h2>のれん・見本・製作例</h2></div>
+    <div class="gallery reveal">
+      <div class="g-card"><div class="swatch" style="background:#8a1f1f;"></div><p>らーめん店<br>のれん</p></div>
+      <div class="g-card"><div class="swatch" style="background:var(--indigo);"></div><p>日本料理・<br>居酒屋</p></div>
+      <div class="g-card"><div class="swatch" style="background:#2c4a3a;"></div><p>すし・割烹店</p></div>
+      <div class="g-card"><div class="swatch" style="background:#4a3626;"></div><p>そば・<br>うどん店</p></div>
+      <div class="g-card"><div class="swatch" style="background:var(--gold);"></div><p>和風店舗<br>各種</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">PRICE LIST</div><h2>のれんオーダー価格表</h2></div>
+    <p class="reveal price-note" style="text-align:center; margin-bottom:24px;">一間巾（150cm〜180cm巾・60cm〜90cm高）／染抜き箇所数と生地の種類で製作料金が変わります。</p>
+    <table class="price-table reveal">
+      <tr><th>仕様</th><th>地白（生成り）</th><th>地染め</th></tr>
+      <tr><td>一ヶ所の染抜き（天竺木綿）</td><td>25,000円</td><td>27,000円</td></tr>
+      <tr><td>二ヶ所の染抜き（天竺木綿）</td><td>27,000円</td><td>29,000円</td></tr>
+      <tr><td>三ヶ所の染抜き（天竺木綿）</td><td>29,000円</td><td>31,000円</td></tr>
+      <tr><td>五ヶ所の染抜き（天竺木綿）</td><td>29,000円</td><td>31,000円</td></tr>
+      <tr><td>麻生地（一ヶ所）</td><td>30,000円</td><td>32,000円</td></tr>
+    </table>
+    <p class="reveal price-note" style="text-align:center;">※サイズ・生地・色数・文字・デザインの配置などで料金は変わります。お気軽にご相談ください。</p>
+  </div>
+</section>
+
+<section style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">SERVICE</div><h2>ものづくりの姿勢</h2></div>
+    <div class="technique reveal">
+      <div class="t-card"><h3>ロゴから一貫して</h3><p>ロゴの作成・染め・仕立てまで、すべてオリジナル・オーダーメイドで対応します。</p></div>
+      <div class="t-card"><h3>染元ならではの価格</h3><p>間に卸を挟まない染元だからこそ、細やかな対応とお求めやすい制作料金を実現しています。</p></div>
+      <div class="t-card"><h3>生地見本を無料でお届け</h3><p>ウェブ上では伝えにくい風合いも、無料の生地見本でご確認いただけます。</p></div>
+      <div class="t-card"><h3>お手入れのご案内も</h3><p>長くご使用いただくためのお手入れ方法やクリーニングについてもご案内しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap" style="max-width:620px;">
+    <div class="section-head reveal"><div class="en">CONTACT</div><h2>会社概要・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>染元　亀屋染物店（暖簾屋）</td></tr>
+      <tr><th>所在地</th><td>〒256-0802　神奈川県小田原市小竹822-79</td></tr>
+      <tr><th>TEL</th><td>0465-25-0388</td></tr>
+      <tr><th>メール</th><td>nolenya_z2@yahoo.co.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">染元　亀屋染物店</div>
+  <div>神奈川県小田原市小竹822-79　TEL 0465-25-0388</div>
+  <div style="margin-top:14px; opacity:.7;">このページはデザイン提案用のサンプルであり、亀屋染物店様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+const colors=['#1f3a5f','#3c6591','#8a1f1f','#2c4a3a','#b8923f'];
+const hang = document.getElementById('norenHang');
+for(let i=0;i<7;i++){
+  const s = document.createElement('div');
+  s.className='noren-strip';
+  s.style.background = colors[i % colors.length];
+  hang.appendChild(s);
+}
+</script>
+</body>
+</html>
