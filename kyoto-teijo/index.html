@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>庭匠 平岡次雄「京の名工」｜京都庭常</title>
+<style>
+:root{
+  --bg:#151812; --panel:#1e231a; --line:#333d2c; --text:#eef0e6;
+  --sub:#bcc4ab; --moss:#5a7a4a; --moss2:#8caa6f; --stone:#8a8578;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#2c3524; color:#dbe6c4; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(21,24,18,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.15em; color:var(--moss2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--moss2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--moss2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(90,122,74,0.18), transparent 55%), var(--bg);}
+.badge{display:inline-block; border:1px solid var(--moss2); color:var(--moss2); padding:6px 20px; border-radius:20px; font-size:.72rem; font-family:sans-serif; letter-spacing:.1em; margin-bottom:22px;}
+.eyebrow{letter-spacing:.35em; color:var(--stone); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem); letter-spacing:.08em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; background:var(--moss); color:#fff; padding:13px 36px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--moss2); color:var(--bg);}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--moss2); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.timeline{position:relative; padding-left:26px; border-left:2px solid var(--line); max-width:760px; margin:0 auto;}
+.tl-item{position:relative; margin-bottom:30px; padding-left:16px;}
+.tl-item::before{content:""; position:absolute; left:-33px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--moss); box-shadow:0 0 0 4px rgba(90,122,74,0.15);}
+.tl-item .yr{color:var(--moss2); font-family:sans-serif; font-size:.78rem; font-weight:bold; margin-bottom:4px;}
+.tl-item p{color:var(--sub); font-size:.9rem; font-family:sans-serif;}
+
+.works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.work-card{background:var(--panel); border:1px solid var(--line); padding:20px; text-align:center; transition:transform .3s, border-color .3s;}
+.work-card:hover{transform:translateY(-6px); border-color:var(--moss2);}
+.work-card h3{color:var(--moss2); font-size:.95rem; margin-bottom:6px; font-family:sans-serif;}
+.work-card p{color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+
+.award-row{display:flex; flex-wrap:wrap; gap:12px; justify-content:center;}
+.award-chip{border:1px solid var(--line); padding:10px 20px; border-radius:20px; font-family:sans-serif; font-size:.8rem; color:var(--sub); transition:border-color .3s, color .3s;}
+.award-chip:hover{border-color:var(--moss2); color:var(--moss2);}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--moss2); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em; font-family:serif;}
+
+@media(max-width:800px){.works-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.works-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の京都庭常様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">京都庭常<span>NIWATSUNE / TSUGUO HIRAOKA</span></div>
+    <nav><ul>
+      <li><a href="#about">庭匠について</a></li>
+      <li><a href="#works">代表作品</a></li>
+      <li><a href="#award">受賞歴</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="badge">京都府「京の名工」受賞</div>
+  <div class="eyebrow">JOYO, KYOTO / SINCE 1951</div>
+  <h1>石は、生きている。<br>庭匠 平岡次雄の仕事。</h1>
+  <p>造園一筋63年。石組の魅力を追い続ける、<br>京都府城陽市の庭師です。</p>
+  <a class="cta" href="#works">代表作品を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">PROFILE</div><h2>庭匠について</h2></div>
+    <div class="timeline reveal">
+      <div class="tl-item"><div class="yr">1935年</div><p>京都にて、造園業「平岡常朝」の次男として生まれる。</p></div>
+      <div class="tl-item"><div class="yr">1951年</div><p>家業に入門。ある別荘の仕事で見た「石組」に、全身に電気が走るような感覚を覚える。</p></div>
+      <div class="tl-item"><div class="yr">以来63年</div><p>「石は生きている」という確信のもと、石組空間の魅力を追い続ける。</p></div>
+      <div class="tl-item"><div class="yr">現在</div><p>専慶流教授（総師範）、勝山妙玄寺僧侶としての顔も持ちながら、庭作品づくりに邁進中。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">WORKS</div><h2>代表作品</h2></div>
+    <div class="works-grid reveal">
+      <div class="work-card"><h3>平治の滝</h3><p>へいじのたき</p></div>
+      <div class="work-card"><h3>豆富の里</h3><p>とうふのさと</p></div>
+      <div class="work-card"><h3>訪来</h3><p>ほうらい</p></div>
+      <div class="work-card"><h3>常春の庭</h3><p>とこはるのにわ</p></div>
+      <div class="work-card"><h3>をりをりの庭</h3><p>をりをりのにわ</p></div>
+      <div class="work-card"><h3>京大名誉教授　多田道太郎先生邸</h3><p>庭園濡れ縁にて語らう</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="award">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head reveal"><div class="en">AWARDS</div><h2>受賞歴・技能功労</h2></div>
+    <div class="award-row reveal">
+      <div class="award-chip">京都府「京の名工」</div>
+      <div class="award-chip">城陽市長表彰</div>
+      <div class="award-chip">造園1級技能士</div>
+      <div class="award-chip">職業訓練指導員</div>
+      <div class="award-chip">記念品：純金優秀技術章</div>
+    </div>
+    <p class="reveal" style="text-align:center; color:var(--sub); font-family:sans-serif; margin-top:24px; font-size:.85rem;">
+      「和風総本家」「TVチャンピオン」「KBS」など、テレビ出演・取材多数。著書に『石庭・石組・その手法』ほか。
+    </p>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">CONTACT</div><h2>お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>京都庭常（庭匠 平岡次雄）</td></tr>
+      <tr><th>所在地</th><td>京都府城陽市寺田今堀136-58</td></tr>
+      <tr><th>TEL</th><td>0774-52-5328</td></tr>
+      <tr><th>FAX</th><td>0774-52-9001</td></tr>
+      <tr><th>メール</th><td>niwatsune-72@kzh.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">京都庭常</div>
+  <div>京都府城陽市寺田今堀136-58　TEL 0774-52-5328</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、京都庭常様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

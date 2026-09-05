@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新発田の割烹料理店｜割烹 谷川</title>
+<style>
+:root{
+  --bg:#181613; --panel:#221e19; --line:#3e362c; --text:#f2ece0;
+  --sub:#c9bda4; --indigo:#1f3a5f; --vermillion:#b8342a; --gold:#c9a24a;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#3a2c1a; color:#f0d9b8; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(24,22,19,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.15em; color:var(--gold); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--vermillion);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--vermillion);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(184,52,42,0.16), transparent 55%), var(--bg);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.1em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; background:var(--vermillion); color:#fff; padding:13px 36px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:#d1493a;}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(135deg,#1f3a5f,#181613); display:flex; align-items:center; justify-content:center; color:var(--sub); font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.menu-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.menu-card{background:var(--panel); border:1px solid var(--line); padding:22px; transition:transform .3s, border-color .3s;}
+.menu-card:hover{transform:translateY(-6px); border-color:var(--gold);}
+.menu-card h3{color:var(--gold); font-size:1rem; margin-bottom:8px; font-family:sans-serif;}
+.menu-card p{color:var(--sub); font-size:.82rem; font-family:sans-serif;}
+
+.matsuri-box{background:var(--panel); border:1px solid var(--vermillion); padding:32px; border-radius:6px;}
+.matsuri-box p{color:var(--sub); font-size:.9rem; margin-bottom:12px; font-family:sans-serif;}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--gold); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em; font-family:serif;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .menu-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.menu-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の割烹谷川様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">割烹　谷川<span>SHIBATA, NIIGATA</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#menu">お料理</a></li>
+      <li><a href="#matsuri">新発田まつり</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">CREATED 1975 / SHIBATA CITY</div>
+  <h1>新発田を愛し、<br>気どらないグルメを。</h1>
+  <p>ご家族の御会食も、グルメ志向のあなたも。<br>日本海の幸を、炭火焼きと共にお届けします。</p>
+  <a class="cta" href="#menu">お料理を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">店内・お料理の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>創業から46年以上、新潟県新発田市で「気どらないグルメ」をモットーに営んでまいりました。日本海の幸を活かした一品料理から、お子様膳、七五三祝い、法事料理まで、ご予算に合わせてお作りします。</p>
+        <p>予算に応じてのおまかせお料理や、お弁当のご相談も承っております。お好きなお料理をオーダー予約いただくこともできます。</p>
+        <p>新発田市推奨のダッタンそば（ルチンたっぷり）を使ったお料理もご用意しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">MENU</div><h2>お料理</h2></div>
+    <div class="menu-grid reveal">
+      <div class="menu-card"><h3>日本海の幸</h3><p>かに・貝・いか・魚のお刺身、天日干しの干物</p></div>
+      <div class="menu-card"><h3>夏の天然岩がき</h3><p>山北笹川流れの天然岩がき（夏季限定）</p></div>
+      <div class="menu-card"><h3>炭火焼き</h3><p>串焼き・焼き魚・うなぎ炭火焼き</p></div>
+      <div class="menu-card"><h3>丼物・定食</h3><p>おにぎり・安兵衛ラーメンも</p></div>
+      <div class="menu-card"><h3>鍋物（冬季）</h3><p>すっぽん・ふぐ・かも・たら・さけ・かき・チゲ・ハタハタ鍋</p></div>
+      <div class="menu-card"><h3>お祝い・法事料理</h3><p>お子様膳・七五三祝い・オードブルもご相談ください</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="matsuri">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head reveal"><div class="en">FESTIVAL</div><h2>城下町新発田まつり</h2></div>
+    <div class="matsuri-box reveal">
+      <p>毎年8月26日から29日にかけて開催される「城下町新発田まつり」。六町内の台輪（山車）が魂の競演を繰り広げます。</p>
+      <p>当店は上町一番組の台輪とも縁が深く、地域のお祭り文化を大切にしながら、お客様をお迎えしています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>割烹　谷川</td></tr>
+      <tr><th>所在地</th><td>新潟県新発田市中央町4丁4-5</td></tr>
+      <tr><th>TEL</th><td>0254-22-2190</td></tr>
+      <tr><th>メール</th><td>tanikawa@inet-shibata.or.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">割烹　谷川</div>
+  <div>新潟県新発田市中央町4丁4-5　TEL 0254-22-2190</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、割烹谷川様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

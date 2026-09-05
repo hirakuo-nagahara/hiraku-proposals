@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>京料理・鴨鍋の店｜鴨弘</title>
+<style>
+:root{
+  --bg:#160f10; --panel:#221718; --line:#3e2a2c; --text:#f2e8e4;
+  --sub:#c9b3ac; --wine:#7a2029; --wine2:#a13a42; --gold:#c9a24a;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#3a1c20; color:#f0c9ce; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(22,15,16,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.15em; color:var(--gold); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--wine2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--wine2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(122,32,41,0.2), transparent 55%), var(--bg);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.1em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; border:1px solid var(--gold); color:var(--gold); padding:12px 34px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--gold); color:var(--bg);}
+
+section{padding:88px 24px;}
+.wrap{max-width:1000px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(135deg,#7a2029,#160f10); display:flex; align-items:center; justify-content:center; color:var(--sub); font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.hours-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.hours-table th,.hours-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.hours-table th{background:var(--wine); color:#fff; font-weight:normal;}
+
+.info-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.info-card{background:var(--panel); border:1px solid var(--line); padding:22px; text-align:center; transition:transform .3s, border-color .3s;}
+.info-card:hover{transform:translateY(-6px); border-color:var(--gold);}
+.info-card h3{color:var(--gold); font-size:.95rem; margin-bottom:8px; font-family:sans-serif;}
+.info-card p{color:var(--sub); font-size:.8rem; font-family:sans-serif;}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--gold); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em; font-family:serif;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .info-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の鴨弘様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">鴨弘<span>KAMOHIRO / KYOTO</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#hours">営業時間</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">SHOGOIN, KYOTO</div>
+  <h1>京都・聖護院で、<br>人気の鴨鍋を。</h1>
+  <p>平安神宮にほど近い京料理の店。<br>カウンター7席、座敷16名様ほどでお迎えします。</p>
+  <a class="cta" href="#contact">アクセスを見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">お店・鴨鍋の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>京都市左京区聖護院、平安神宮に近い場所で営む京料理の店です。人気の鴨鍋をはじめ、お品書きに沿った京料理をご用意しています。</p>
+        <p>カウンター7席、座敷テーブル16名様くらいまでご利用いただけます。出張料理・出前などのご相談も承っております。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:var(--panel);">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">HOURS</div><h2>営業時間</h2></div>
+    <table class="hours-table reveal">
+      <tr><th>ひるどき</th><td>11:30〜13:30</td></tr>
+      <tr><th>ゆうどき</th><td>17:00〜22:00（ラストオーダー20:30）</td></tr>
+      <tr><th>定休日</th><td>木曜日・日曜日祝日の昼</td></tr>
+    </table>
+    <div class="info-grid reveal" style="margin-top:30px;">
+      <div class="info-card"><h3>カウンター</h3><p>7席</p></div>
+      <div class="info-card"><h3>座敷テーブル</h3><p>16名様くらい</p></div>
+      <div class="info-card"><h3>駐車場</h3><p>あり</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>鴨弘（かもひろ）</td></tr>
+      <tr><th>所在地</th><td>京都府京都市左京区聖護院蓮華蔵町21-5</td></tr>
+      <tr><th>TEL</th><td>075-751-6863</td></tr>
+      <tr><th>メール</th><td>ka2yf8@bma.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">鴨弘</div>
+  <div>京都市左京区聖護院蓮華蔵町21-5　TEL 075-751-6863</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、鴨弘様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
