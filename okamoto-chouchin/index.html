@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提灯・腕章刺繍制作販売｜オカモト</title>
+<style>
+:root{
+  --bg:#1c1210; --panel:#2a1a16; --line:#4a2e24; --text:#f4ece0;
+  --sub:#d1b8a3; --red:#b8342a; --red2:#e0553f; --gold:#d9a33e;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.9;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#3a221c; color:#f0cbb8; text-align:center; font-size:.78rem; padding:8px 12px; font-family:sans-serif;}
+header{position:sticky; top:0; z-index:50; background:rgba(28,18,16,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.15em; color:var(--gold); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em; font-family:sans-serif;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; font-family:sans-serif; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--red2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--red2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(184,52,42,0.2), transparent 55%), var(--bg);}
+.lantern-row{display:flex; justify-content:center; gap:14px; margin-bottom:30px; flex-wrap:wrap;}
+.lantern{width:36px; height:48px; border-radius:50%; box-shadow:inset 0 0 0 2px rgba(0,0,0,0.2);}
+.eyebrow{letter-spacing:.35em; color:var(--gold); font-size:.72rem; margin-bottom:18px; font-family:sans-serif;}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.9rem); letter-spacing:.1em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px; font-family:sans-serif;}
+.cta{display:inline-block; background:var(--red); color:#fff; padding:13px 36px; font-size:.85rem; letter-spacing:.15em; font-family:sans-serif; transition:all .3s;}
+.cta:hover{background:var(--red2);}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--gold); font-size:.7rem; font-family:sans-serif;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(135deg,#b8342a,#3a221c); display:flex; align-items:center; justify-content:center; color:#f4d9c9; font-family:sans-serif; font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem; font-family:sans-serif;}
+
+.price-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.price-card{background:var(--panel); border:1px solid var(--line); padding:22px; text-align:center; transition:transform .3s, border-color .3s;}
+.price-card:hover{transform:translateY(-6px); border-color:var(--gold);}
+.price-card h3{color:var(--gold); font-size:1rem; margin-bottom:8px; font-family:sans-serif;}
+.price-card .price{color:var(--red2); font-size:1.3rem; font-weight:bold; margin-bottom:8px; font-family:sans-serif;}
+.price-card p{color:var(--sub); font-size:.8rem; font-family:sans-serif;}
+
+.flow-row{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; text-align:center;}
+.flow-step{flex:1; min-width:110px; font-family:sans-serif;}
+.flow-num{width:38px; height:38px; border-radius:50%; border:1px solid var(--gold); color:var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-size:.9rem;}
+.flow-step p{font-size:.76rem; color:var(--sub);}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem; font-family:sans-serif;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem; font-family:sans-serif;}
+footer .fbrand{color:var(--gold); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em; font-family:serif;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .price-grid{grid-template-columns:1fr 1fr;} .flow-row{flex-direction:column;}}
+@media(max-width:520px){.price-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在のオカモト様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">オカモト<span>CHOUCHIN &amp; SHISHU</span></div>
+    <nav><ul>
+      <li><a href="#about">お店について</a></li>
+      <li><a href="#price">商品・価格</a></li>
+      <li><a href="#flow">ご注文の流れ</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="lantern-row">
+    <div class="lantern" style="background:var(--red);"></div>
+    <div class="lantern" style="background:var(--gold);"></div>
+    <div class="lantern" style="background:var(--red2);"></div>
+    <div class="lantern" style="background:var(--gold);"></div>
+    <div class="lantern" style="background:var(--red);"></div>
+  </div>
+  <div class="eyebrow">HIGASHIOSAKA, HYOTANYAMA</div>
+  <h1>提灯と刺繍に、<br>想いを込めて。</h1>
+  <p>神社・仏閣提灯から、お祭りの腕章まで。<br>オリジナルデザインもおまかせください。</p>
+  <a class="cta" href="#price">商品・価格を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>お店について</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">提灯・刺繍の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>ちょうちんはお祭りやお盆など、日本の伝統的なイベントのものばかりではありません。お子様の名前を入れて誕生記念のちょうちんを作ったり、オリジナルのデザインでお部屋のインテリアとして使われる方もいらっしゃいます。</p>
+        <p>丸型、夏目、長型、切長、箱ちょうちん、手持ちなど、いろいろな形のちょうちんを取り揃えております。特注のちょうちんも承っておりますので、ご希望のサイズ・形をお気軽にご相談ください。</p>
+        <p>のぼり・のれん・旗のデザイン刺繍、腕章のデザイン・制作も承っています。だんじりやお祭りで大活躍の青年団腕章など、ご予算に応じてご提案いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">PRICE</div><h2>商品・価格の一例</h2></div>
+    <div class="price-grid reveal">
+      <div class="price-card"><h3>地蔵尊ちょうちん</h3><div class="price">¥8,400</div><p>長型　縦30×横70cm　左右に卍のイラスト入り</p></div>
+      <div class="price-card"><h3>御神燈ちょうちん</h3><div class="price">¥3,150</div><p>長型　縦50×横23cm　神社の境内に使用</p></div>
+      <div class="price-card"><h3>河内青年団ちょうちん</h3><div class="price">¥7,350</div><p>細長　縦50×横15cm　だんじり・お祭りに</p></div>
+      <div class="price-card"><h3>手打ちうどん看板ちょうちん</h3><div class="price">¥10,500</div><p>丸型　縦55×横45cm　お店の看板として人気</p></div>
+      <div class="price-card"><h3>腕章デザイン・制作</h3><div class="price">ご相談</div><p>青年団・応援団向けの腕章刺繍</p></div>
+      <div class="price-card"><h3>のぼり・のれん・旗</h3><div class="price">ご相談</div><p>デザイン刺繍で承ります</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ORDER FLOW</div><h2>ご注文の流れ</h2></div>
+    <div class="flow-row reveal">
+      <div class="flow-step"><div class="flow-num">1</div><p>お電話・FAX・メールでご相談</p></div>
+      <div class="flow-step"><div class="flow-num">2</div><p>デザイン・お見積り（約2週間）</p></div>
+      <div class="flow-step"><div class="flow-num">3</div><p>ご納得後、制作開始</p></div>
+      <div class="flow-step"><div class="flow-num">4</div><p>制作（約1ヶ月）</p></div>
+      <div class="flow-step"><div class="flow-num">5</div><p>ヤマト運輸にてお届け</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:620px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>オカモト</td></tr>
+      <tr><th>代表者</th><td>岡本定雄</td></tr>
+      <tr><th>所在地</th><td>〒579-8045　大阪府東大阪市本町8-22</td></tr>
+      <tr><th>アクセス</th><td>近鉄奈良線「瓢箪山」駅北口より徒歩2分　サンロード瓢箪山商店街内</td></tr>
+      <tr><th>TEL</th><td>072-981-0008</td></tr>
+      <tr><th>FAX</th><td>072-981-4045</td></tr>
+      <tr><th>営業時間</th><td>10:00〜19:00（第2・4火曜定休）</td></tr>
+      <tr><th>メール</th><td>tyoutin-okamoto@ksn.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">オカモト</div>
+  <div>大阪府東大阪市本町8-22　TEL 072-981-0008</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、オカモト様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>

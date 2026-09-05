@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彫金・革工房 cafe MiFuu｜千葉市稲毛区</title>
+<style>
+:root{
+  --bg:#211a14; --panel:#2b2118; --line:#4a3a28; --text:#f2e9dc;
+  --sub:#c9b8a0; --amber:#d1893a; --amber2:#e8ab5f; --olive:#7a8a4f;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--text); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.85;}
+a{color:inherit; text-decoration:none;}
+.disclaimer{background:#3a2c18; color:#f0d9b8; text-align:center; font-size:.78rem; padding:8px 12px;}
+header{position:sticky; top:0; z-index:50; background:rgba(33,26,20,0.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+.nav-wrap{max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+.brand{font-size:1.2rem; letter-spacing:.1em; color:var(--amber2); font-weight:bold;}
+.brand span{display:block; font-size:.6rem; color:var(--sub); letter-spacing:.15em;}
+nav ul{display:flex; gap:22px; list-style:none; font-size:.85rem; flex-wrap:wrap;}
+nav a{position:relative; padding-bottom:3px; transition:color .25s;}
+nav a:hover{color:var(--amber2);}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--amber2);transition:width .3s;}
+nav a:hover::after{width:100%;}
+
+.hero{position:relative; padding:100px 24px 80px; text-align:center; overflow:hidden;
+  background: radial-gradient(ellipse at 50% -10%, rgba(209,137,58,0.16), transparent 55%), var(--bg);}
+.eyebrow{letter-spacing:.35em; color:var(--amber2); font-size:.72rem; margin-bottom:18px;}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem); letter-spacing:.06em; margin-bottom:20px;}
+.hero p{color:var(--sub); font-size:.98rem; max-width:560px; margin:0 auto 30px;}
+.cta{display:inline-block; border:1px solid var(--amber2); color:var(--amber2); padding:12px 34px; font-size:.85rem; letter-spacing:.15em; transition:all .3s;}
+.cta:hover{background:var(--amber2); color:var(--bg);}
+
+section{padding:88px 24px;}
+.wrap{max-width:1060px; margin:0 auto;}
+.section-head{text-align:center; margin-bottom:52px;}
+.section-head .en{letter-spacing:.28em; color:var(--amber2); font-size:.7rem;}
+.section-head h2{font-size:1.85rem; margin-top:10px; letter-spacing:.05em;}
+
+.reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
+.about-photo{aspect-ratio:4/3; background:linear-gradient(150deg,#3a2c18,#211a14); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--sub); font-size:.78rem; text-align:center; padding:20px;}
+.about-text p{color:var(--sub); margin-bottom:15px; font-size:.92rem;}
+
+.craft-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+.craft-card{background:var(--panel); border:1px solid var(--line); padding:26px; text-align:center; transition:transform .3s, border-color .3s;}
+.craft-card:hover{transform:translateY(-6px); border-color:var(--amber);}
+.craft-card .ico{width:44px; height:44px; margin:0 auto 14px; border-radius:8px; background:linear-gradient(135deg, var(--amber), var(--olive));}
+.craft-card h3{font-size:.98rem; margin-bottom:8px; color:var(--amber2);}
+.craft-card p{color:var(--sub); font-size:.8rem;}
+
+.hours-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.hours-table th,.hours-table td{border:1px solid var(--line); padding:12px 10px; text-align:center;}
+.hours-table th{background:var(--panel); color:var(--amber2); font-weight:normal;}
+
+.company-table{width:100%; border-collapse:collapse; font-size:.9rem;}
+.company-table tr{border-bottom:1px solid var(--line);}
+.company-table th{text-align:left; padding:14px 10px; color:var(--sub); width:150px; font-weight:normal;}
+.company-table td{padding:14px 10px;}
+
+footer{border-top:1px solid var(--line); padding:50px 24px; text-align:center; color:var(--sub); font-size:.78rem;}
+footer .fbrand{color:var(--amber2); font-size:1.02rem; margin-bottom:10px; letter-spacing:.08em;}
+
+@media(max-width:800px){.about-grid{grid-template-columns:1fr;} .craft-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.craft-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="disclaimer">※これはデザイン提案用のサンプルです。実在の彫金/革工房cafe MiFuu様の許可を得て制作したものではありません。</div>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">彫金・革工房　MiFuu<span>JEWELRY / LEATHER / CAFE</span></div>
+    <nav><ul>
+      <li><a href="#about">工房紹介</a></li>
+      <li><a href="#craft">取り扱い</a></li>
+      <li><a href="#hours">営業時間</a></li>
+      <li><a href="#contact">アクセス</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">CHIBA, INAGE-KU</div>
+  <h1>あなただけの一点を、<br>革と金属でかたちに。</h1>
+  <p>ジュエリー・レザー・鮫肌Zippoから、真鍮表札、ペットの首輪まで。<br>改造・修理のご相談も承っています。</p>
+  <a class="cta" href="#craft">取り扱い商品を見る</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">ABOUT</div><h2>工房紹介</h2></div>
+    <div class="about-grid reveal">
+      <div class="about-photo">工房・店内の写真<br>（イメージ）</div>
+      <div class="about-text">
+        <p>千葉市稲毛区の平屋の一軒家で営む、彫金・革工房＋カフェのお店です。以前は千葉市中央区新宿で「エスニック雑貨＆工房 MiFuu」として営業しておりました。</p>
+        <p>JR稲毛駅から徒歩5分ほど、線路沿いの白い壁の平屋が目印です。ジュエリーやレザーグッズのオーダー・修理・改造まで、幅広くご相談いただけます。</p>
+        <p>お店の一角にはcafeスペースもございますので、ものづくりの合間にほっと一息ついていただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="craft" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="en">CRAFT</div><h2>取り扱い商品</h2></div>
+    <div class="craft-grid reveal">
+      <div class="craft-card"><div class="ico"></div><h3>Jewelry</h3><p>彫金によるオーダージュエリー</p></div>
+      <div class="craft-card"><div class="ico"></div><h3>Leather</h3><p>レザーグッズ・オーダー作品</p></div>
+      <div class="craft-card"><div class="ico"></div><h3>鮫肌Zippo</h3><p>個性的な鮫肌加工のZippoライター</p></div>
+      <div class="craft-card"><div class="ico"></div><h3>改造・修理</h3><p>お持ちの品を新しい魅力へ</p></div>
+      <div class="craft-card"><div class="ico"></div><h3>真鍮表札</h3><p>味わい深い真鍮製のオーダー表札</p></div>
+      <div class="craft-card"><div class="ico"></div><h3>Original Leather For Pets</h3><p>ペットの首輪など、大切な家族のために</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal"><div class="en">HOURS</div><h2>営業時間</h2></div>
+    <table class="hours-table reveal">
+      <tr><th>営業時間</th><td>12:00〜17:00</td></tr>
+      <tr><th>定休日</th><td>火曜（時々不定休あり）</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--panel);">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head reveal"><div class="en">ACCESS</div><h2>アクセス・お問い合わせ</h2></div>
+    <table class="company-table reveal">
+      <tr><th>屋号</th><td>彫金・革工房　cafe MiFuu</td></tr>
+      <tr><th>所在地</th><td>千葉県千葉市稲毛区黒砂台2-11-5</td></tr>
+      <tr><th>TEL</th><td>043-241-3238</td></tr>
+      <tr><th>アクセス</th><td>JR稲毛駅より徒歩5分ほど（線路沿い）</td></tr>
+      <tr><th>メール</th><td>mifuu@keb.biglobe.ne.jp（本サンプルでは掲載のみ、送信フォームは設置していません）</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">彫金・革工房　cafe MiFuu</div>
+  <div>千葉県千葉市稲毛区黒砂台2-11-5　TEL 043-241-3238</div>
+  <div style="margin-top:14px; opacity:.65;">このページはデザイン提案用のサンプルであり、MiFuu様の公式サイトではありません。</div>
+</footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  io.observe(el);
+});
+</script>
+</body>
+</html>
